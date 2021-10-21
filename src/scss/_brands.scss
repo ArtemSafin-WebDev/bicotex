@@ -1,0 +1,238 @@
+.brands {
+    padding-top: 9rem;
+    padding-bottom: 13rem;
+    background: #244a9a;
+    color: white;
+}
+
+.brands__content {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-gap: 2rem;
+}
+
+.brands__content-inner {
+    grid-column: 2 / 11;
+}
+
+.brands__secondary-heading {
+    margin-bottom: 6.5rem;
+}
+
+.brands__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    grid-gap: 2rem;
+}
+
+.brands__card {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    border-radius: 1rem;
+    display: flex;
+
+    &::before {
+        content: '';
+        width: 1px;
+        padding-bottom: 56.25%;
+        flex-shrink: 0;
+    }
+
+    .no-touch &:hover {
+        .brands__card-image-container::after {
+            opacity: 1;
+        }
+
+        .brands__card-content-inner {
+            transform: translateY(0);
+        }
+
+        .brands__card-plus {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .2s, visibility 0s linear .2s;
+        }
+    }
+}
+
+.brands__card-plus {
+    position: absolute;
+    right: 2.5rem;
+    top: 2.5rem;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-color: rgba(white, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 1px;
+        width: 2.5rem;
+        background-color: #fff;
+        transform: translate(-50%, -50%);
+    }
+
+    &::after {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+}
+
+.brands__card-image-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        transition: opacity 0.3s;
+        opacity: 0;
+    }
+}
+
+.brands__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brands__card-content {
+    width: 50%;
+    flex-grow: 1;
+
+    padding: 3.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.brands__card-content-inner {
+    position: relative;
+    transform: translateY(calc(100% + 3rem));
+    transition: transform 0.3s;
+}
+
+.brands__card-title {
+    font-weight: 500;
+    font-size: 5rem;
+    line-height: 5.6rem;
+    letter-spacing: 0.02em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 3rem;
+}
+
+.brands__card-content-text {
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.02em;
+    max-width: 55rem;
+}
+
+.brands__slider {
+    grid-column: 2 / -1;
+    grid-row: 1 / 3;
+    border-radius: 1rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .swiper-container {
+        flex-grow: 1;
+        margin: 0;
+    }
+}
+
+.brands__slider-arrows {
+    position: absolute;
+    right: 4rem;
+    bottom: 3rem;
+    z-index: 10;
+}
+
+.brands__slider-card {
+    padding: 3.5rem 4rem;
+    position: relative;
+    z-index: 1;
+    flex-grow: 1;
+}
+
+.brands__slider-card-image-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    }
+}
+
+.brands__slider-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none;
+    
+}
+
+.brands__slider-card-title {
+    font-weight: 500;
+    font-size: 5rem;
+    line-height: 5.6rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 4.5rem;
+    user-select: none;
+}
+
+.brands__slider-card-more {
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 130%;
+    letter-spacing: 0.02em;
+    padding: 0.3rem 1.5rem;
+    border: 0.3rem solid #ffffff;
+    border-radius: 2rem;
+    user-select: none;
+}
