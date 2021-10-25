@@ -1,0 +1,109 @@
+.production {
+    margin-bottom: 19rem;
+}
+
+.production__content {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-gap: 2rem;
+}
+
+.production__content-inner {
+    grid-column: 2 / 12;
+}
+
+.production__secondary-heading {
+    margin-bottom: 6.5rem;
+}
+
+.production__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 2rem;
+}
+
+.production__list-item {
+    display: flex;
+    flex-direction: column;
+    &::before {
+        display: none;
+    }
+}
+
+.production__card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    z-index: 10;
+    border-radius: 1rem;
+    background-color: #fff;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    padding: 2.4rem 3.4rem;
+    padding-bottom: 21rem;
+
+    &::before {
+        content: counter(ordered-list, decimal-leading-zero);
+        position: absolute;
+        font-weight: 500;
+        font-size: 1.1rem;
+        line-height: 130%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: rgba(#464646, 0.4);
+        left: 3.4rem;
+        bottom: 3.4rem;
+    }
+
+    .no-touch &:hover {
+        .production__card-image {
+            transform: scale(1.03);
+        }
+    }
+}
+
+.production__card-image {
+    position: absolute;
+    z-index: -1;
+    height: 26rem;
+    max-width: 100%;
+    right: 0;
+    bottom: 0;
+    transition: transform .5s;
+}
+
+.production__card-top-row {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    svg {
+        flex-shrink: 0;
+        width: 1rem;
+        height: 2rem;
+        flex-shrink: 0;
+        fill: var(--primary-color);
+        margin-left: 2rem;
+        margin-top: 2.4rem;
+    }
+}
+
+.production__card-title {
+    font-weight: 500;
+    font-size: 5rem;
+    line-height: 5.6rem;
+    letter-spacing: 0.02em;
+    color: var(--primary-color);
+}
+
+.production__card-text {
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.02em;
+    color: #464646;
+    margin-bottom: 3rem;
+}

@@ -13,33 +13,46 @@
     display: grid;
     place-items: center;
     border: 1px solid var(--primary-color);
-    transition: background-color .2s, border-color .2s, opacity .2s;
+    transition: background-color 0.2s, border-color 0.2s, opacity 0.2s;
+    
+
+
+    &--filled {
+        background-color: var(--bg-color);
+    }
     svg {
         width: 1.2rem;
         height: 1.2rem;
         fill: var(--primary-color);
-        transition: fill .2s;
+        transition: fill 0.2s, fill-opacity .2s;
     }
     &:last-child {
         margin-right: 0;
     }
 
-
-   
-
     &.swiper-button-disabled {
-        opacity: 0.5;
+        // opacity: 0.5;
         pointer-events: none;
+
+        svg {
+            fill-opacity: 0.5;
+        }
+    }
+
+    &--pale {
+        border-color: #F7D2BE;
     }
 
     .no-touch &:not(.swiper-button-disabled):hover,
     .touch &:not(.swiper-button-disabled):active {
         background-color: var(--primary-color);
+        border-color: var(--primary-color);
         svg {
             fill: white;
         }
     }
 
+   
 
     &--white {
         border-color: white;
@@ -51,6 +64,7 @@
         .no-touch &:not(.swiper-button-disabled):hover,
         .touch &:not(.swiper-button-disabled):active {
             background-color: white;
+            border-color: white;
             svg {
                 fill: var(--primary-color);
             }

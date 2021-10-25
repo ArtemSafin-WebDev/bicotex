@@ -13,6 +13,13 @@ import accordions from './accordions';
 import modals from './modals';
 import events from './events';
 import brandsSlider from './brandsSlider';
+import process from './process';
+import animation from './animation';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import imagesLoaded from './imagesLoaded';
+import fancybox from './fancybox';
+gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -29,9 +36,16 @@ document.addEventListener('DOMContentLoaded', function() {
     datepicker();
     events();
     brandsSlider();
+    process();
+    animation();
+    imagesLoaded();
+    fancybox();
 });
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
+
+    ScrollTrigger.refresh();
+   
     setTimeout(() => document.body.classList.add('animatable'), 300);
-})
+});
