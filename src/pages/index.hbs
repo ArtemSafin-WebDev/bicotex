@@ -57,6 +57,10 @@
 
 
                                 <img src="img/video-preview.jpg" alt="">
+
+                                <video class="lazyload" muted="" data-autoplay="" loop playsinline preload="none">
+                                    <source src="assets/video/video.mp4" type="video/mp4" />
+                                </video>
                                 <div class="intro__video-inner">
                                     <svg width="50" height="50" aria-hidden="true" class="icon-play">
                                         <use xlink:href="#play"></use>
@@ -576,23 +580,26 @@
 </section>
 
 <section class="learn-about">
-    <div class="container">
-        <div class="learn-about__card">
-            <div class="learn-about__card-bg">
-                <img data-src="img/learn-about.jpg" alt="" class="lazyload">
+    <div class="learn-about__card-bg">
+        <img data-src="img/learn-about.jpg" alt="" class="lazyload">
 
+    </div>
+    <div class="container">
+        <div class="learn-about__content">
+            <div class="learn-about__card">
+
+                <div class="learn-about__card-content">
+                    <h2 class="learn-about__card-title">
+                        Производим на уникальном европейском оборудовании
+                    </h2>
+                </div>
+                <a href="#" class="learn-about__card-bottom-panel">
+                    Познакомиться с производством
+                    <svg width="14" height="14" aria-hidden="true" class="icon-fat-arrow-right">
+                        <use xlink:href="#fat-arrow-right"></use>
+                    </svg>
+                </a>
             </div>
-            <div class="learn-about__card-content">
-                <h2 class="learn-about__card-title">
-                    Производим на уникальном европейском оборудовании
-                </h2>
-            </div>
-            <a href="#" class="learn-about__card-bottom-panel">
-                Познакомиться с производством
-                <svg width="14" height="14" aria-hidden="true" class="icon-fat-arrow-right">
-                    <use xlink:href="#fat-arrow-right"></use>
-                </svg>
-            </a>
         </div>
     </div>
 </section>
@@ -706,7 +713,14 @@
                 </div>
             </div>
             <div class="quote__image-wrapper">
-                <img data-src="img/author.jpg" alt="" class="quote__image lazyload">
+                <div class="quote__image-container">
+                    {{!-- <img data-src="img/author.jpg" alt="" class="lazyload"> --}}
+
+                    <video class="lazyload" muted="" data-autoplay="" loop playsinline preload="none">
+                        <source src="assets/video/video.mp4" type="video/mp4" />
+                    </video>
+                </div>
+
             </div>
         </div>
     </div>

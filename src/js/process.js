@@ -1,4 +1,4 @@
-import { Swiper, Navigation, EffectFade, Controller } from 'swiper';
+import { Swiper, Navigation, EffectFade, Controller, Mousewheel } from 'swiper';
 
 import { gsap } from 'gsap';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
@@ -7,7 +7,7 @@ import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger, DrawSVGPlugin);
 
-Swiper.use([Navigation, EffectFade, Controller]);
+Swiper.use([Navigation, EffectFade, Controller, Mousewheel]);
 
 export default function process() {
     const elements = Array.from(document.querySelectorAll('.js-process'));
@@ -32,6 +32,11 @@ export default function process() {
             fadeEffect: {
                 crossFade: true
             },
+            // mousewheel: {
+            //     invert: false,
+            //     eventsTarget: '.process__col',
+            //     releaseOnEdges: true
+            // },
             on: {
                 init: swiper => {
                     setActiveBullet(swiper.realIndex);

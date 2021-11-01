@@ -45,16 +45,36 @@
 .quote__image-wrapper {
     grid-column: 7 / 12;
     grid-row: 1 / 3;
+    
+  
 }
 
-.quote__image {
-    display: block;
-    height: auto;
-    width: 100%;
-    border-radius: 1rem;
+.quote__image-container {
+    position: relative;
     max-width: 63rem;
     margin-top: 6.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    img, video {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%; 
+        height: auto;
+        display: block;  
+    }
+    &::before {
+        content: '';
+        padding-bottom: 125%;
+        display: block;
+
+    }
 }
+
+
 
 .quote__text-content-inner {
     grid-column: 2 / 6;
