@@ -5,6 +5,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
 export default function animation() {
+    if (window.matchMedia('(max-width: 640px)').matches) return;
+    
     const intro = document.querySelector('.intro');
     const process = document.querySelector('.process');
 

@@ -2,22 +2,44 @@
     padding-top: 13.5rem;
     padding-top: 22.5rem;
     margin-bottom: 23rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 8rem;
+        padding-bottom: 0;
+        margin-bottom: 7rem;
+    }
 }
 
 .intro__content {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-gap: 2rem;
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-gap: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .intro__content-inner {
-    grid-column: 2 / 12;
+    @include breakpointMF(small-tablet) {
+        grid-column: 2 / 12;
+    }
 }
 
 .intro__row {
     display: flex;
     align-items: center;
     margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
 
 .intro__heading {
@@ -25,12 +47,23 @@
     flex-grow: 1;
     position: relative;
     z-index: 2;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 1;
+        margin-bottom: 3rem;
+    }
 }
 
 .intro__video-outer-wrapper {
     margin-left: 4.5rem;
     flex-shrink: 0;
     position: relative;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        flex-shrink: 1;
+    }
 }
 
 .intro__video-large-shape {
@@ -43,7 +76,12 @@
     z-index: -1;
     pointer-events: none;
 
-    width: 252rem; height: 252rem;
+    width: 252rem;
+    height: 252rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .intro__video-medium-shape {
@@ -55,6 +93,10 @@
     transform: translate(-50%, -50%) scale(1);
     z-index: -1;
     pointer-events: none;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .intro__video {
@@ -68,6 +110,16 @@
     border-radius: 0 30rem 30rem 30rem;
     overflow: hidden;
     color: white;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        height: auto;
+        &::before {
+            content: '';
+            display: block;
+            padding-bottom: 100%;
+        }
+    }
 
     &:link,
     &:visited {
@@ -90,12 +142,24 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
     svg {
         width: 5rem;
         height: 5rem;
         display: block;
         margin-bottom: 1.8rem;
         fill: white;
+
+        @include breakpoint(mobile) {
+            width: 4rem;
+            height: 4rem;
+        }
     }
 }
 
@@ -104,16 +168,26 @@
     font-size: 1.8rem;
     line-height: 109%;
     letter-spacing: 0.02em;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+    }
 }
 
 .intro__numbers-list {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
     grid-gap: 2rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
 
 .intro__numbers-list-item {
-    grid-column: span 3;
+    @include breakpointMF(small-tablet) {
+        grid-column: span 3;
+    }
 }
 
 .intro__numbers-card-amount {
@@ -122,6 +196,12 @@
     line-height: 109%;
     letter-spacing: 0.02em;
     margin-bottom: 0.9rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 0.8rem;
+    }
 }
 
 .intro__numbers-card-text {
@@ -129,12 +209,15 @@
     font-size: 1.8rem;
     line-height: 109%;
     letter-spacing: 0.02em;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+    }
 }
 
 .intro__video-pinned-element {
     position: relative;
 }
-
 
 .intro__video-dot {
     position: absolute;
@@ -150,5 +233,4 @@
 }
 
 .intro__small-ball {
-
 }

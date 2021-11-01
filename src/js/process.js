@@ -32,11 +32,11 @@ export default function process() {
             fadeEffect: {
                 crossFade: true
             },
-            // mousewheel: {
-            //     invert: false,
-            //     eventsTarget: '.process__col',
-            //     releaseOnEdges: true
-            // },
+            mousewheel: {
+                invert: false,
+                eventsTarget: '.process__col',
+                releaseOnEdges: true
+            },
             on: {
                 init: swiper => {
                     setActiveBullet(swiper.realIndex);
