@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 2rem;
+    grid-template-rows: auto 1fr;
 }
 
 .quote__text-content {
@@ -26,7 +27,8 @@
 .quote__author {
     grid-column: 2 / 9;
     grid-row: 2 / 3;
-    align-self: center;
+ 
+    // align-self: center;
 }
 
 .quote__author-name {
@@ -34,6 +36,7 @@
     font-size: 3rem;
     line-height: 5.6rem;
     letter-spacing: 0.02em;
+    padding-top: 2rem;
 }
 
 .quote__author-role {
