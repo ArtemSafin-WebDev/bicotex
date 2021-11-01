@@ -31,10 +31,11 @@ export default function animation() {
                         path: path,
                         align: path,
                         autoRotate: true,
-                        alignOrigin: [0.5, 0.5]
+                        alignOrigin: [0.5, 0.5],
+                        fromCurrent: true
                     },
                     repeat: -1,
-                    fromCurrent: true,
+
                     duration: ballsAnimationDuration,
                     ease: 'none'
                 },

@@ -1,9 +1,9 @@
 import { Swiper, Navigation, EffectFade, Controller } from 'swiper';
 
 import { gsap } from 'gsap';
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger, DrawSVGPlugin);
 
@@ -14,7 +14,8 @@ export default function process() {
 
     elements.forEach(element => {
         const mainContainer = element.querySelector('.process__slider-text .swiper-container');
-        const imagesContainer = element.querySelector('.process__slider-images-slider .swiper-container');
+        const outerImageSliderContainer = element.querySelector('.process__slider-images-outer-slider > .swiper-container');
+        const blobContainer = element.querySelector('.process__slider-images-outer-shell-blob-slider .swiper-container');
         const bullets = Array.from(element.querySelectorAll('.process__slider-pagination-bullet'));
 
         const setActiveBullet = index => {
@@ -31,26 +32,45 @@ export default function process() {
             fadeEffect: {
                 crossFade: true
             },
-            navigation: {
-                nextEl: element.querySelector('.slider-arrows__btn--next'),
-                prevEl: element.querySelector('.slider-arrows__btn--prev')
-            },
-            init: false,
             on: {
                 init: swiper => {
                     setActiveBullet(swiper.realIndex);
-
-                    gsap.to('.process__slider-images-progress svg:nth-child(2) circle', { duration: 0.4, drawSVG: `0% ${swiper.progress * 100}%` });
                 },
                 slideChange: swiper => {
                     setActiveBullet(swiper.realIndex);
-
-                    gsap.to('.process__slider-images-progress svg:nth-child(2) circle', { duration: 0.4, drawSVG: `0% ${swiper.progress * 100}%` });
                 }
             }
         });
 
         mainSlider.init();
+
+        const outerImageSlider = new Swiper(outerImageSliderContainer, {
+            slidesPerView: 1,
+            speed: 400,
+            watchOverflow: true,
+            // autoHeight: true,
+            effect: 'fade',
+            allowTouchMove: false,
+            fadeEffect: {
+                crossFade: true
+            }
+        });
+
+        const blobSlider = new Swiper(blobContainer, {
+            slidesPerView: 1,
+            speed: 400,
+            watchOverflow: true,
+            autoHeight: true,
+            effect: 'fade',
+            allowTouchMove: false,
+            fadeEffect: {
+                crossFade: true
+            }
+        });
+
+        mainSlider.controller.control = outerImageSlider;
+
+        outerImageSlider.controller.control = blobSlider;
 
         bullets.forEach((bullet, bulletIndex) => {
             bullet.addEventListener('click', event => {
@@ -60,13 +80,38 @@ export default function process() {
             });
         });
 
-        const imagesSlider = new Swiper(imagesContainer, {
-            slidesPerView: 1,
-            speed: 400,
-            watchOverflow: true
-        });
+        const innerImagesSliders = Array.from(document.querySelectorAll('.process__slider-images-inner-slider'));
 
-        mainSlider.controller.control = imagesSlider;
-        imagesSlider.controller.control = mainSlider;
+        innerImagesSliders.forEach(slider => {
+            const container = slider.querySelector('.swiper-container');
+            const progress = slider.querySelector('.process__slider-images-progress svg:nth-child(2) circle');
+
+            const innerImagesSlider = new Swiper(container, {
+                slidesPerView: 1,
+                speed: 400,
+                watchOverflow: true,
+                init: false,
+                navigation: {
+                    nextEl: slider.querySelector('.slider-arrows__btn--next'),
+                    prevEl: slider.querySelector('.slider-arrows__btn--prev')
+                },
+                on: {
+                    init: swiper => {
+                        gsap.to(progress, {
+                            duration: 0.4,
+                            drawSVG: `0% ${swiper.progress * 100}%`
+                        });
+                    },
+                    slideChange: swiper => {
+                        gsap.to(progress, {
+                            duration: 0.4,
+                            drawSVG: `0% ${swiper.progress * 100}%`
+                        });
+                    }
+                }
+            });
+
+            innerImagesSlider.init();
+        });
     });
 }
