@@ -35,7 +35,8 @@ export default function process() {
             mousewheel: {
                 invert: false,
                 eventsTarget: '.process__col',
-                releaseOnEdges: true
+                releaseOnEdges: true,
+                sensitivity: 0.5
             },
             on: {
                 init: swiper => {

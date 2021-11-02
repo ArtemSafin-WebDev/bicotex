@@ -24,6 +24,21 @@
     background-size: 3.6rem 2.8rem;
 }
 
+.quote__text {
+    p {
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+.quote__text-hidden {
+    height: 0;
+    overflow: hidden;
+}
+
 .quote__author {
     grid-column: 2 / 9;
     grid-row: 2 / 3;

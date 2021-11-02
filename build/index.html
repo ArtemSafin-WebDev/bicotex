@@ -140,7 +140,7 @@
                                 <img src="img/video-preview.jpg" alt="">
 
                                 <video class="lazyload" muted="" data-autoplay="" loop playsinline preload="none">
-                                    <source src="assets/video/video.mp4" type="video/mp4" />
+                                    <source src="assets/video/video-2.mp4" type="video/mp4" />
                                 </video>
                                 <div class="intro__video-inner">
                                     <svg width="50" height="50" aria-hidden="true" class="icon-play">
@@ -764,7 +764,7 @@
     <div class="container">
         <div class="quote__content">
             <div class="quote__text-content">
-                <div class="quote__text-content-inner">
+                <div class="quote__text-content-inner js-read-more-parent">
 
 
                     <h3 class="quote__heading">
@@ -779,8 +779,21 @@
                             важной задачей является сохранение природных ресурсов, которых с каждым днем становится всё
                             меньше на планете.
                         </p>
+                        <div class="quote__text-hidden js-read-more-hidden-text">
+                            <p>
+                                Я горжусь своей командой, ведь мы с нуля начинаем возрождать текстильную промышленность
+                                в регионе. За каждым станком стоит наш с Вами земляк, а за рабочим местом сидит та самая
+                                удивительная женщина, которая успевает быть и офисным сотрудником и прекрасной мамой или
+                                женой. Каждый из нас является конечным потребителем производимых изделий и мы как никто
+                                заинтересованы в качестве и высоких потребительских свойствах.
+                            </p>
+                            <p>
+                                Нас вдохновляет идея о том, что наши дети будут вдыхать чистый и свежий воздух где бы
+                                они не находились, а мы им в этом обязательно поможем!
+                            </p>
+                        </div>
                     </div>
-                    <a href="#" class="quote__read-more">
+                    <a href="#" class="quote__read-more js-read-more" data-text="Скрыть">
                         Читать полностью
                     </a>
                 </div>
@@ -795,10 +808,9 @@
             </div>
             <div class="quote__image-wrapper">
                 <div class="quote__image-container">
+                    <img data-src="img/author.jpg" alt="" class="lazyload">
 
-                    <video class="lazyload" muted="" data-autoplay="" loop playsinline preload="none">
-                        <source src="assets/video/video.mp4" type="video/mp4" />
-                    </video>
+
                 </div>
 
             </div>

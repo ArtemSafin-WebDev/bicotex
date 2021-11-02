@@ -19,6 +19,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import imagesLoaded from './imagesLoaded';
 import fancybox from './fancybox';
+import readMore from './readMore';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     animation();
     imagesLoaded();
     fancybox();
+    readMore();
 });
 
 window.addEventListener('load', function() {
