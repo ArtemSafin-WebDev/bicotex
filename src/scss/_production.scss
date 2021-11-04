@@ -68,10 +68,12 @@
     position: absolute;
     z-index: -1;
     height: 26rem;
-    max-width: 100%;
+    max-width: 85%;
     right: 0;
     bottom: 0;
     transition: transform .5s;
+    object-fit: contain;
+    object-position: right bottom;
 }
 
 .production__card-top-row {

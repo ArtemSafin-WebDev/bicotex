@@ -41,6 +41,11 @@
         color: var(--primary-color);
     }
 
+    .no-touch &:hover,
+    .touch &:active {
+        text-decoration: underline;
+    }
+
     svg {
         flex-shrink: 0;
         width: 1.2rem;

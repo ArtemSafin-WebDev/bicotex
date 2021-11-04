@@ -39,8 +39,6 @@
         grid-column: 9 / -1;
         align-self: flex-end;
     }
-
-  
 }
 
 .page-footer__languages {
@@ -93,10 +91,31 @@
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--primary-color);
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: 0.2rem;
+        background-color: var(--primary-color);
+        transition: opacity 0.2s;
+        opacity: 0;
+        margin-top: -0.2rem;
+    }
 
     &:link,
     &:visited {
         color: var(--primary-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        &::before {
+            opacity: 1;
+        }
     }
 }
 
@@ -181,5 +200,3 @@
     line-height: 2rem;
     letter-spacing: 0.02em;
 }
-
-

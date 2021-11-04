@@ -13,13 +13,14 @@ import accordions from './accordions';
 import modals from './modals';
 import events from './events';
 import brandsSlider from './brandsSlider';
-import process from './process';
+import processImageSliders from './processImageSliders';
 import animation from './animation';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import imagesLoaded from './imagesLoaded';
 import fancybox from './fancybox';
 import readMore from './readMore';
+import processStages from './processStages';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -37,11 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
     datepicker();
     events();
     brandsSlider();
-    process();
-    animation();
+    processImageSliders();
+    
     imagesLoaded();
     fancybox();
     readMore();
+    processStages();
+
+    animation();
 });
 
 window.addEventListener('load', function() {

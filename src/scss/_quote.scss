@@ -86,7 +86,7 @@
     }
     &::before {
         content: '';
-        padding-bottom: 125%;
+        padding-bottom: 135%;
         display: block;
 
     }
@@ -123,5 +123,10 @@
     &:link,
     &:visited {
         color: var(--primary-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        text-decoration: underline;
     }
 }
