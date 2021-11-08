@@ -42,10 +42,25 @@
         flex-shrink: 0;
     }
 
-    .no-touch &:hover {
-        .brands__card-image-container::after {
-            opacity: 1;
+    color: #464646;
+
+    &:link,
+    &:visited {
+        color: #464646;
+    }
+
+    &--light {
+        color: white;
+        &:link,
+        &:visited {
+            color: white;
         }
+    }
+
+    .no-touch &:hover {
+        // .brands__card-image-container::after {
+        //     opacity: 1;
+        // }
 
         .brands__card-content-inner {
             transform: translateY(0);
@@ -54,7 +69,7 @@
         .brands__card-plus {
             opacity: 0;
             visibility: hidden;
-            transition: opacity .2s, visibility 0s linear .2s;
+            transition: opacity 0.2s, visibility 0s linear 0.2s;
         }
     }
 }
@@ -137,8 +152,8 @@
 
 .brands__card-title {
     font-weight: 500;
-    font-size: 5rem;
-    line-height: 5.6rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
     letter-spacing: 0.02em;
     position: absolute;
     left: 0;
@@ -213,7 +228,6 @@
     object-fit: cover;
     user-select: none;
     -webkit-user-drag: none;
-    
 }
 
 .brands__slider-card-title {
