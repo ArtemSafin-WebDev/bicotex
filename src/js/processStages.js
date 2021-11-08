@@ -15,7 +15,7 @@ export default function processStages() {
     const tl = gsap.timeline({
         scrollTrigger: {
             start: 'bottom bottom',
-            end: '+=300%',
+            end: '+=800%',
             trigger: pinWrapper,
             anticipatePin: 1,
             pin: true,
