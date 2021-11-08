@@ -31,7 +31,7 @@ export default function processStages() {
 
                 const sectionStep = 100 / (layers.length - 1);
                 const progress = (currentProgress / sectionStep) * 100;
-                const currentSectionIndex = Math.ceil(progress);
+                const currentSectionIndex = Math.round(progress);
 
                 console.log({
                     currentProgress,
