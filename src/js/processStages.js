@@ -17,6 +17,7 @@ export default function processStages() {
             start: 'bottom bottom',
             end: '+=150%',
             trigger: pinWrapper,
+            anticipatePin: 1,
             pin: true,
             pinSpacing: true,
             scrub: true,

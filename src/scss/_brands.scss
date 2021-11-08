@@ -58,9 +58,9 @@
     }
 
     .no-touch &:hover {
-        // .brands__card-image-container::after {
-        //     opacity: 1;
-        // }
+        .brands__card-image-container::after {
+            opacity: 1;
+        }
 
         .brands__card-content-inner {
             transform: translateY(0);
@@ -112,17 +112,24 @@
     height: 100%;
     z-index: -1;
 
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-        transition: opacity 0.3s;
-        opacity: 0;
-    }
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: rgba(white, 0.2);
+    //     transition: opacity 0.3s;
+    //     opacity: 0;
+    // }
+
+    // .brands__card--light & {
+    //     &::after {
+           
+    //         background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    //     }
+    // }
 }
 
 .brands__card-image {
