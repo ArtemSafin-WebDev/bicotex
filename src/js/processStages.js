@@ -28,15 +28,16 @@ export default function processStages() {
             },
             onUpdate: self => {
                 const currentProgress = self.progress;
-                console.log('Current progress', currentProgress);
 
                 const sectionStep = 100 / (layers.length - 1);
-                const currentSectionIndex = Math.ceil((currentProgress / sectionStep) * 100);
+                const progress = (currentProgress / sectionStep) * 100;
+                const currentSectionIndex = Math.ceil(progress);
 
-                // console.log({
-                //     currentProgress,
-                //     index: Math.floor((currentProgress / sectionStep) * 100)
-                // });
+                console.log({
+                    currentProgress,
+                    progress,
+                    index: currentSectionIndex
+                });
 
                 bullets.forEach(bullet => bullet.classList.remove('active'));
                 bullets[currentSectionIndex].classList.add('active');
