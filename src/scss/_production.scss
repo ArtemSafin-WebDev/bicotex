@@ -1,111 +1,158 @@
 .production {
-    margin-bottom: 19rem;
+    padding-top: 20rem;
+    padding-bottom: 12rem;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+    }
+
+    .container {
+        position: relative;
+
+        z-index: 1;
+    }
+}
+
+.production__figure {
+    position: absolute;
+    width: 124.8rem;
+    height: 124.8rem;
+    right: -1rem;
+    top: 50%;
+    margin-top: -5rem;
+    z-index: -1;
+    transform: translateY(-50%);
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.production__figure-text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: var(--primary-color);
+    position: absolute;
+    transform: translateY(50%);
+    max-width: 21rem;
+    position: absolute;
+    left: 17rem;
+    bottom: 22rem;
 }
 
 .production__content {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-gap: 2rem;
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-gap: 3.2rem;
+    }
 }
 
 .production__content-inner {
-    grid-column: 2 / 12;
+    @include breakpointMF(small-tablet) {
+        grid-column: 2 / 12;
+    }
 }
 
-.production__secondary-heading {
-    margin-bottom: 6.5rem;
+.production__heading {
+    margin-bottom: 7.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .production__list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-gap: 2rem;
+    grid-gap: 9.6rem;
+    grid-row-gap: 4.5rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
 }
 
 .production__list-item {
     display: flex;
     flex-direction: column;
-    &::before {
-        display: none;
-    }
 }
 
 .production__card {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    padding: 2rem;
     position: relative;
-    z-index: 10;
-    border-radius: 1rem;
-    background-color: #fff;
+    background: #ffffff;
+    border-radius: 0.8rem;
     overflow: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
-    padding: 2.4rem 3.4rem;
-    padding-bottom: 21rem;
+    padding-bottom: 22rem;
+    color: #464646;
 
-    &::before {
-        content: counter(ordered-list, decimal-leading-zero);
-        position: absolute;
-        font-weight: 500;
-        font-size: 1.1rem;
-        line-height: 130%;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        color: rgba(#464646, 0.4);
-        left: 3.4rem;
-        bottom: 3.4rem;
+    
+
+    &:link,
+    &:visited {
+        color: #464646;
     }
 
-    .no-touch &:hover {
-        .production__card-image {
-            transform: scale(1.03);
-        }
-    }
-}
-
-.production__card-image {
-    position: absolute;
-    z-index: -1;
-    height: 26rem;
-    max-width: 85%;
-    right: 0;
-    bottom: 0;
-    transition: transform .5s;
-    object-fit: contain;
-    object-position: right bottom;
-}
-
-.production__card-top-row {
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-
-    svg {
-        flex-shrink: 0;
-        width: 1rem;
-        height: 2rem;
-        flex-shrink: 0;
-        fill: var(--primary-color);
-        margin-left: 2rem;
-        margin-top: 2.4rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 17rem;
     }
 }
 
 .production__card-title {
-    font-weight: 500;
-    font-size: 5rem;
-    line-height: 5.6rem;
-    letter-spacing: 0.02em;
-    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 2.7rem;
+    line-height: 3.2rem;
+    color: #244a9a;
+    margin-bottom: 0.8rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    svg {
+        width: 2rem;
+        height: 1.6rem;
+        fill: currentColor;
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 0.7rem;
+        margin-left: 0.3rem;
+
+        @include breakpoint(mobile) {
+            width: 1.6rem;
+            height: 1.2rem;
+            margin-bottom: 0.4rem;
+            margin-left: 0.2rem;
+        }
+    }
 }
 
 .production__card-text {
-    font-weight: 300;
-    font-size: 1.8rem;
-    line-height: 2.5rem;
-    letter-spacing: 0.02em;
+    font-size: 1.6rem;
+    line-height: 2rem;
     color: #464646;
-    margin-bottom: 3rem;
+}
+
+.production__card-image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    pointer-events: none;
 }

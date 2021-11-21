@@ -1,7 +1,7 @@
 .process {
     padding-bottom: calc(var(--scale-factor, 1) * 60rem);
 
-    --scale-factor: 0.9;
+    --scale-factor: 0.85;
 
     @include breakpoint(mobile) {
         margin-bottom: 7rem;
@@ -74,7 +74,7 @@
     text-transform: uppercase;
     color: rgba(#464646, 0.4);
     margin-bottom: calc(var(--scale-factor, 1) * 1.5rem);
-    pointer-events: none;
+    // pointer-events: none;
 
     @include breakpoint(mobile) {
         margin: 0;

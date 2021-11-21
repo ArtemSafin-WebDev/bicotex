@@ -1,9 +1,10 @@
 import { gsap } from 'gsap';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 
-gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, DrawSVGPlugin);
 
 export default function processStages() {
     const pinWrapper = document.querySelector('.process-pin-wrapper');
@@ -69,7 +70,11 @@ export default function processStages() {
     bullets.forEach((bullet, bulletIndex) => {
         bullet.addEventListener('click', event => {
             event.preventDefault();
-            console.log('Seeking');
+
+            tl.seek(`stage-${bulletIndex}`);
+
+            bullets.forEach(bullet => bullet.classList.remove('active'));
+            bullet.classList.add('active');
         });
     });
 }

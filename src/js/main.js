@@ -12,7 +12,6 @@ import datepicker from './datepicker';
 import accordions from './accordions';
 import modals from './modals';
 import events from './events';
-import brandsSlider from './brandsSlider';
 import processImageSliders from './processImageSliders';
 import animation from './animation';
 import gsap from 'gsap';
@@ -21,6 +20,7 @@ import imagesLoaded from './imagesLoaded';
 import fancybox from './fancybox';
 import readMore from './readMore';
 import processStages from './processStages';
+import salesSlider from './salesSlider';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     modals();
     datepicker();
     events();
-    brandsSlider();
+  
     processImageSliders();
     
     imagesLoaded();
@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     processStages();
 
     animation();
+    salesSlider();
 });
 
 window.addEventListener('load', function() {
