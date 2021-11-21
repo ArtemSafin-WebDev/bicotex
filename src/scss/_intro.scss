@@ -1,10 +1,10 @@
 .intro {
     padding-top: 24rem;
     padding-bottom: 12rem;
-  
 
     @include breakpoint(mobile) {
         padding: 3rem 0;
+        padding-top: 8rem;
     }
 }
 
@@ -29,6 +29,12 @@
         grid-gap: 3.2rem;
         align-items: center;
     }
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 3rem;
+    }
 }
 
 .intro__col {
@@ -51,11 +57,13 @@
 
 .intro__main-heading {
     margin-bottom: 14rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .intro__drop {
     position: relative;
-   
 }
 
 .intro__video-shape {
@@ -82,8 +90,6 @@
 .intro__video-small-shape {
     width: 57.6rem;
     height: 57.6rem;
-
-  
 }
 
 .intro__drop-link {
@@ -124,12 +130,21 @@
     top: 4rem;
     opacity: 0.65;
     object-fit: contain;
+
+    @include breakpoint(mobile) {
+    }
 }
 
 .intro__numbers-list {
     display: flex;
     flex-wrap: wrap;
     gap: 7rem;
+
+    @include breakpoint(mobile) {
+        gap: 2rem;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
 }
 
 .intro__card-amount {
@@ -139,6 +154,12 @@
     letter-spacing: 0.02em;
     color: #244a9a;
     margin-bottom: 0.8rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 0.4rem;
+    }
 }
 
 .intro__card-text {
@@ -163,11 +184,22 @@
     line-height: 2.4rem;
     text-align: center;
 
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
     svg {
         width: 4.5rem;
         height: 5rem;
         flex-shrink: 0;
         margin-bottom: 4rem;
         fill: currentColor;
+
+        @include breakpoint(mobile) {
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: 2rem;
+        }
     }
 }

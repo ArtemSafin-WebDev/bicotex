@@ -51,6 +51,8 @@ export default function newProcess() {
 
         if (!pinWrapper) return;
 
+        if (window.matchMedia('(max-width: 640px)').matches) return;
+
         const tl = gsap.timeline({
             scrollTrigger: {
                 start: 'bottom bottom',

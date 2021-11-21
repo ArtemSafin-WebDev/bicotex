@@ -97,17 +97,20 @@
     margin-bottom: 4rem;
 
     @include breakpoint(mobile) {
-        width: 5rem;
-        height: 5rem;
-        margin-bottom: 3rem;
+        width: 4rem;
+        height: 4rem;
+        margin-bottom: 2rem;
     }
 }
 
 .ceo__info {
-    align-self: center;
-    justify-self: center;
     display: flex;
     flex-direction: column;
+
+    @include breakpointMF(small-tablet) {
+        align-self: center;
+        justify-self: center;
+    }
 }
 
 .ceo__image-block {
@@ -129,6 +132,8 @@
         @include breakpoint(mobile) {
             width: 120%;
             height: 120%;
+
+            display: none;
         }
     }
 }
@@ -143,6 +148,7 @@
 
     @include breakpoint(mobile) {
         width: 70%;
+        margin: 0 auto;
     }
     &::before {
         content: '';

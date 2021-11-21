@@ -2,4 +2,9 @@
     font-weight: 600;
     font-size: 6rem;
     line-height: 6.9rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.8rem;
+        line-height: 1.2;
+    }
 }

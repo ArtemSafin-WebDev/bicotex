@@ -50,7 +50,7 @@
 
     @include breakpoint(mobile) {
         grid-template-columns: minmax(0, 1fr);
-        grid-gap: 3rem;
+        grid-gap: 2rem;
     }
 }
 
@@ -69,6 +69,10 @@
         padding-bottom: 150%;
         width: 1px;
         flex-shrink: 0;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 70%;
+        }
     }
 }
 
@@ -89,6 +93,11 @@
     font-size: 1.8rem;
     line-height: 2.4rem;
     font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
 }
 
 .sales__card-image-container {
@@ -102,7 +111,7 @@
     overflow: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
-    background-color: var(--text-color);
+    
 }
 
 .sales__card-image {
@@ -112,6 +121,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
 }
 
 .sales__slider-card {
@@ -129,6 +139,10 @@
         padding-bottom: 150%;
         width: 1px;
         flex-shrink: 0;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 70%;
+        }
     }
 }
 
@@ -240,6 +254,10 @@
     justify-content: center;
     z-index: 10;
     gap: 1.2rem;
+
+    @include breakpoint(mobile) {
+        bottom: 2rem;
+    }
 
     .swiper-pagination-bullet {
         width: 1.6rem;

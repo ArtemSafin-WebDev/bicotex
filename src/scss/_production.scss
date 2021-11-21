@@ -4,6 +4,7 @@
 
     @include breakpoint(mobile) {
         padding: 3rem 0;
+        padding-top: 6rem;
     }
 
     .container {
@@ -107,7 +108,7 @@
     }
 
     @include breakpoint(mobile) {
-        margin-bottom: 17rem;
+       
     }
 }
 
@@ -135,7 +136,7 @@
         @include breakpoint(mobile) {
             width: 1.6rem;
             height: 1.2rem;
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.6rem;
             margin-left: 0.2rem;
         }
     }
