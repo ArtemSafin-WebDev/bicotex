@@ -7,6 +7,7 @@ import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, DrawSVGPlugin);
 
 export default function processStages() {
+    return;
     const pinWrapper = document.querySelector('.process-pin-wrapper');
     const layers = Array.from(document.querySelectorAll('.process__layer'));
     const bullets = Array.from(document.querySelectorAll('.process__slider-pagination-bullet'));

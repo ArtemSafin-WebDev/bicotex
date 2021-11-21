@@ -10,16 +10,19 @@ export default function animation() {
     const intro = document.querySelector('.intro');
     const process = document.querySelector('.process');
 
-    const ballsCount = 10;
+  
 
     const ballsAnimationDuration = 70;
 
-    let delayFactor = ballsAnimationDuration / ballsCount;
+  
 
     const shapes = Array.from(document.querySelectorAll('.intro__video-shape'));
 
     shapes.forEach(shape => {
         const balls = Array.from(shape.querySelectorAll('.intro__video-shape-ball'));
+
+        const ballsCount = balls.length;
+        let delayFactor = ballsAnimationDuration / ballsCount;
         const path = shape.querySelector('.intro__video-shape-path');
         const tl = gsap.timeline({
             paused: true
