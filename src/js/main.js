@@ -22,6 +22,7 @@ import readMore from './readMore';
 import processStages from './processStages';
 import salesSlider from './salesSlider';
 import newProcess from './newProcess';
+import sales from './sales';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -49,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     animation();
     salesSlider();
     newProcess();
+    sales();
 });
 
 window.addEventListener('load', function() {

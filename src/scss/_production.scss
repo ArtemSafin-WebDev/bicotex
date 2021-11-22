@@ -100,11 +100,16 @@
     padding-bottom: 22rem;
     color: #464646;
 
-    
+    transition: transform .3s;
 
     &:link,
     &:visited {
         color: #464646;
+    }
+
+    .no-touch &:hover {
+        transform: scale(1.03);
+        transition: transform .5s ease-out;
     }
 
     @include breakpoint(mobile) {

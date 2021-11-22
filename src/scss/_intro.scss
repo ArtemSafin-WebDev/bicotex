@@ -57,6 +57,8 @@
 
 .intro__main-heading {
     margin-bottom: 14rem;
+
+  
     @include breakpoint(mobile) {
         margin-bottom: 3rem;
     }
@@ -144,6 +146,28 @@
         gap: 2rem;
         flex-direction: column;
         flex-wrap: nowrap;
+    }
+}
+
+
+.intro__numbers-list-item {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1rem);
+    .animatable & {
+        opacity: 1;
+        visibility: inherit;
+
+        transition: all .7s ease .4s;
+        transform: translateY(0);
+
+
+        &:nth-child(2) {
+            transition: all .7s ease .8s;
+        }
+        &:nth-child(3) {
+            transition: all .7s ease 1.2s;
+        }
     }
 }
 
