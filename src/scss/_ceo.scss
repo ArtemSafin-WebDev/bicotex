@@ -58,22 +58,60 @@
     }
 }
 
-.ceo__quote-text {
+.ceo__quote-text,
+.ceo__quote-text-hidden {
     font-size: 1.8rem;
     line-height: 2.4rem;
-    margin-bottom: 2rem;
+    
+
+    p {
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.6rem;
         line-height: 1.2;
+       
+    }
+}
+
+.ceo__quote-text-hidden {
+    margin-bottom: 2rem;
+    @include breakpoint(mobile) {
         margin-bottom: 1.7rem;
     }
+}
+
+
+.ceo__quote-text-hidden {
+    height: 0;
+    overflow: hidden;
+}
+
+.ceo__quote-text-hidden-inner {
+    
 }
 
 .ceo__quote-link {
     font-size: 1.8rem;
     line-height: 2.4rem;
     color: #244a9a;
+
+    span:nth-child(2) {
+        display: none;
+    }
+
+    .ceo__quote-accordion.active & {
+        span:nth-child(1) {
+            display: none;
+        }
+        span:nth-child(2) {
+            display: inline;
+        }
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.6rem;
