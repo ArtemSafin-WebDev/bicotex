@@ -16,7 +16,8 @@ export default function sales() {
                         scrollTrigger: {
                             trigger: card,
                             start: 'top bottom',
-                            end: 'bottom top'
+                            end: 'bottom top',
+                            scrub: true
                         }
                     });
                     if (cardIndex % 2 === 0) {

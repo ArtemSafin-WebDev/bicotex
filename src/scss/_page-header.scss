@@ -1,10 +1,15 @@
 .page-header {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: auto;
     z-index: 80;
+    transition: background-color .2s;
+
+    &.fixed {
+        background-color: white;
+    }
 }
 
 .page-header__row {

@@ -23,6 +23,7 @@ import processStages from './processStages';
 import salesSlider from './salesSlider';
 import newProcess from './newProcess';
 import sales from './sales';
+import fixedHeader from './fixedHeader';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     salesSlider();
     newProcess();
     sales();
+    fixedHeader();
 });
 
 window.addEventListener('load', function() {
