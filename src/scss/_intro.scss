@@ -66,6 +66,10 @@
 
 .intro__drop {
     position: relative;
+
+    @include breakpointMF(small-tablet) {
+        left: 10rem;
+    }
 }
 
 .intro__video-shape {
