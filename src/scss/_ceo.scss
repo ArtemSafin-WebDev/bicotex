@@ -24,7 +24,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 2rem;
-    align-items: center;
+    align-items: flex-start;
 
     @include breakpoint(mobile) {
         grid-template-columns: minmax(0, 1fr);
@@ -62,7 +62,7 @@
 .ceo__quote-text-hidden {
     font-size: 1.8rem;
     line-height: 2.4rem;
-    
+   
 
     p {
         margin-bottom: 1.5rem;
@@ -92,7 +92,7 @@
 }
 
 .ceo__quote-text-hidden-inner {
-    
+    padding-top: 1.5rem;
 }
 
 .ceo__quote-link {
