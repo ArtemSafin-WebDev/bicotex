@@ -17,8 +17,8 @@ export default function sales() {
                     const tl = gsap.timeline({
                         scrollTrigger: {
                             trigger: card,
-                            start: 'top bottom',
-                            end: '+=100%',
+                            start: 'top center',
+                            end: '+=50%',
                             scrub: true
                         }
                     });
