@@ -1,0 +1,103 @@
+.offices {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    background-color: #fff;
+    margin-bottom: 10rem;
+}
+
+.offices__content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 3.2rem;
+}
+
+.offices__departments-list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 3.2rem;
+    grid-column: 2 / 12;
+}
+
+.offices__departments-list-item {
+    grid-column: span 5;
+    &:nth-child(even) {
+        grid-column: 6 / span 5;
+    }
+}
+
+.offices__departments-block {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2.5rem;
+}
+
+.offices__departments-block-heading {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+    color: #464646;
+}
+
+.offices__departments-block-heading-text {
+    font-weight: 300;
+    font-size: 1.8rem;
+    letter-spacing: 0.02em;
+    color: rgba(#464646, 0.5);
+}
+
+.offices__departments-block-contacts-list-item {
+    margin-bottom: 2rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.offices__departments-block-contacts-link {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--primary-color);
+
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(#ff772b, 0.2);
+        opacity: 0;
+        transition: background-color 0.2s, opacity 0.2s;
+    }
+
+    &--underline {
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        &::before {
+            opacity: 1;
+            background-color: #ff772b;
+        }
+    }
+}
+
+.offices__departments-block-contacts-additional {
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.02em;
+    margin-top: 0.5rem;
+}

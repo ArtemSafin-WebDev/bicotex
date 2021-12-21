@@ -1,4 +1,4 @@
-<header class="page-header">
+<header class="page-header {{#if whiteHeader}} page-header--white {{/if}}">
     <div class="container container--wide">
         <div class="page-header__row">
             <div class="page-header__languages">
@@ -12,6 +12,10 @@
             <div class="page-header__main-content">
                 <a href="#" class="page-header__logo-link">
                     <img src="img/logo.svg" alt="" class="page-header__logo-image" width="162">
+
+                    {{#if whiteHeader}}
+                    <img src="img/logo-white.svg" alt="" class="page-header__logo-image" width="162">
+                    {{/if}}
                 </a>
                 <div class="page-header__menu">
                     <nav class="page-header__nav">
@@ -50,7 +54,8 @@
                     </a>
                     <div class="page-header__contact-links">
                         <a href="tel:8 800 201 32 53" class="page-header__phone-link">88002013253</a>
-                        <a href="mailto:info@bicotex.ru" class="page-header__mail-link page-header__mail-link--underline">info@bicotex.ru</a>
+                        <a href="mailto:info@bicotex.ru"
+                            class="page-header__mail-link page-header__mail-link--underline">info@bicotex.ru</a>
                     </div>
                     <a href="#" class="page-header__contact-link">
                         Связаться
