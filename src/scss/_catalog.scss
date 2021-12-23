@@ -1,6 +1,11 @@
 .catalog {
     padding-top: 4.4rem;
     padding-bottom: 14rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 3rem;
+        padding-bottom: 7rem;
+    }
 }
 
 .catalog__top-categories {
@@ -9,6 +14,13 @@
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-gap: 3.2rem;
+    }
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -29,6 +41,11 @@
     transform: translateZ(0);
     padding-bottom: 8.6rem;
     color: #464646;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        padding-bottom: 6rem;
+    }
     &:link,
     &:visited {
         color: #464646;
@@ -55,6 +72,10 @@
     height: 14rem;
     width: auto;
     max-width: 100%;
+
+    @include breakpoint(mobile) {
+        height: 10rem;
+    }
 }
 
 .catalog__top-categories-card-title {
@@ -67,12 +88,23 @@
     letter-spacing: 0.02em;
     margin-bottom: 2rem;
 
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 1.7rem;
+    }
+
     svg {
         margin-left: 2rem;
         width: 1.2rem;
         height: 2.2rem;
         fill: currentColor;
         flex-shrink: 0;
+
+        @include breakpoint(mobile) {
+            width: 1rem;
+            height: 1.7rem;
+        }
     }
 }
 
@@ -81,20 +113,34 @@
     font-size: 1.8rem;
     line-height: 2.5rem;
     letter-spacing: 0.02em;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
 }
 
 .catalog__layout {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 3.2rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
 }
 
 .catalog__sidebar {
-    grid-column: span 3;
+    @include breakpointMF(small-tablet) {
+        grid-column: span 3;
+    }
 }
 
 .catalog__main {
-    grid-column: span 9;
+    @include breakpointMF(small-tablet) {
+        grid-column: span 9;
+    }
 }
 
 .catalog__sidebar-inner {
@@ -103,10 +149,19 @@
     padding: 3rem;
     padding-bottom: 6rem;
     color: #464646;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+       
+    }
 }
 
 .catalog__sidebar-filters-group {
     margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.5rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -118,6 +173,12 @@
     line-height: 3.2rem;
     letter-spacing: 0.02em;
     margin-bottom: 1.8rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .catalog__sidebar-filters-checkboxes {
@@ -130,6 +191,10 @@
     align-items: flex-start;
     cursor: pointer;
     margin-bottom: 1.8rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.2rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -157,12 +222,23 @@
     align-items: center;
     justify-content: center;
 
+    @include breakpoint(mobile) {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+    }
+
     svg {
         width: 1.6rem;
         height: 1.2rem;
         opacity: 0;
         transition: opacity 0.2s;
         fill: var(--primary-color);
+
+        @include breakpoint(mobile) {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
     }
 }
 
@@ -171,6 +247,11 @@
     font-size: 2rem;
     line-height: 2.5rem;
     letter-spacing: 0.02em;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
 }
 
 .catalog__sidebar-filters-checkbox-input:checked ~ .catalog__sidebar-filters-checkbox-mark {
@@ -204,6 +285,13 @@
     display: block;
     text-align: center;
     margin-top: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+        padding: 1.8rem 3rem;
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
     &:link,
     &:visited {
         color: white;
@@ -251,6 +339,11 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 3.2rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
 
 .catalog__list-item {
@@ -267,6 +360,10 @@
     color: #464646;
     padding: 3.5rem;
     flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
     &:link,
     &:visited {
         color: #464646;
@@ -283,6 +380,10 @@
     position: relative;
 
     margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.5rem;
+    }
     &::before {
         content: '';
         display: block;
@@ -307,6 +408,12 @@
     letter-spacing: 0.02em;
     margin-bottom: 1.5rem;
     transition: color 0.2s;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
 }
 
 .catalog__card-specs {
@@ -326,6 +433,11 @@
     letter-spacing: 0.02em;
     background: #f7f7f7;
     border-radius: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
     &--blue {
         color: #244a9a;
     }
@@ -341,6 +453,11 @@
     align-items: center;
     margin-top: 9rem;
     gap: 5.5rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+        gap: 1.8rem;
+    }
 }
 
 .catalog__pagination-prev,
@@ -354,12 +471,22 @@
     background: #ffe9dd;
     border-radius: 50%;
     flex-shrink: 0;
-    transition: background-color .2s;
+    transition: background-color 0.2s;
+
+    @include breakpoint(mobile) {
+        width: 3rem;
+        height: 3rem;
+    }
     svg {
         width: 2.2rem;
         height: 2.2rem;
         fill: var(--primary-color);
-        transition: fill .2s;
+        transition: fill 0.2s;
+
+        @include breakpoint(mobile) {
+            width: 1.8rem;
+            height: 1.8rem;
+        }
     }
 
     &:hover {
@@ -394,6 +521,12 @@
     letter-spacing: 0.02em;
     transition: background-color 0.2s, color 0.2s;
     color: #464646;
+
+    @include breakpoint(mobile) {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.6rem;
+    }
     &:link,
     &:visited {
         color: #464646;

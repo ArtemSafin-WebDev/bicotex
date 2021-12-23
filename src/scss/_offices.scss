@@ -3,12 +3,22 @@
     padding-bottom: 9rem;
     background-color: #fff;
     margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+        margin-bottom: 5rem;
+    }
 }
 
 .offices__content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 3.2rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
 }
 
 .offices__departments-list {
@@ -16,19 +26,36 @@
     grid-template-columns: repeat(10, 1fr);
     grid-gap: 3.2rem;
     grid-column: 2 / 12;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 4rem;
+        grid-column: 1/ -1;
+    }
 }
 
 .offices__departments-list-item {
-    grid-column: span 5;
-    &:nth-child(even) {
-        grid-column: 6 / span 5;
+
+    @include breakpointMF(small-tablet) {
+        grid-column: span 5;
+        &:nth-child(even) {
+            grid-column: 6 / span 5;
+        }
     }
+
+    
+   
 }
 
 .offices__departments-block {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 2.5rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
 }
 
 .offices__departments-block-heading {
@@ -38,6 +65,11 @@
     letter-spacing: 0.02em;
     margin-bottom: 1rem;
     color: #464646;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
 }
 
 .offices__departments-block-heading-text {
@@ -45,10 +77,18 @@
     font-size: 1.8rem;
     letter-spacing: 0.02em;
     color: rgba(#464646, 0.5);
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+    }
 }
 
 .offices__departments-block-contacts-list-item {
     margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -62,6 +102,10 @@
     color: var(--primary-color);
 
     position: relative;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -100,4 +144,8 @@
     line-height: 2.5rem;
     letter-spacing: 0.02em;
     margin-top: 0.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+    }
 }
