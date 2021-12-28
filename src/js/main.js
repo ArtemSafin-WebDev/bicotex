@@ -24,6 +24,9 @@ import salesSlider from './salesSlider';
 import newProcess from './newProcess';
 import sales from './sales';
 import fixedHeader from './fixedHeader';
+import tabs from './tabs';
+import similarProducts from './similarProducts';
+import productGallery from './productGallery';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -53,6 +56,9 @@ document.addEventListener('DOMContentLoaded', function() {
     newProcess();
     sales();
     fixedHeader();
+    tabs();
+    similarProducts();
+    productGallery();
 });
 
 window.addEventListener('load', function() {
