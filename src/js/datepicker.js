@@ -10,7 +10,11 @@ export default function datepicker() {
                 format: 'dd.mm.yyyy',
                 container: '#picker-container',
                 language: 'ru',
-                autoclose: true
+                autoclose: true,
+                templates: {
+                    leftArrow: `<svg width="14" height="14" aria-hidden="true" class="icon-datepicker-prev"><use xlink:href="#datepicker-prev"></use></svg>`,
+                    rightArrow: `<svg width="14" height="14" aria-hidden="true" class="icon-datepicker-next"><use xlink:href="#datepicker-next"></use></svg>`
+                }
             })
             .on('show', function(e) {
                 element.classList.add('datepicker-shown');

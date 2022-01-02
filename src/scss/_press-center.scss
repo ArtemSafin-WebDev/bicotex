@@ -1,0 +1,697 @@
+.press-center {
+    padding-top: 16rem;
+    margin-bottom: 11rem;
+    @include breakpoint(mobile) {
+        padding-top: 7rem;
+        margin-bottom: 7rem;
+    }
+}
+
+.press-center__grid {
+    display: grid;
+    grid-template-areas: repeat(12, minmax(0, 1fr));
+    grid-gap: 3.2rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+.press-center__inner {
+    @include breakpointMF(small-tablet) {
+        grid-column: 2 / 12;
+    }
+}
+
+.press-center__breadcrumbs {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 160%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: #c5c5c5;
+    a {
+        .no-touch &:not(.active):hover,
+        .touch &:not(.active):active {
+            color: var(--primary-color);
+        }
+
+        &.active {
+            cursor: default;
+            pointer-events: none;
+        }
+    }
+}
+
+.press-center__main-heading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7.5rem;
+    line-height: 109%;
+    letter-spacing: 0.02em;
+    color: #464646;
+    margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.8rem;
+        line-height: 1.2;
+        margin-bottom: 5rem;
+    }
+}
+
+.press-center__selected-news {
+    margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 6rem;
+    }
+}
+
+.press-center__selected-news-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 7rem;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+        align-items: stretch;
+    }
+}
+
+.press-center__selected-news-image {
+    display: block;
+    height: auto;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.press-center__selected-news-info {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #a1b3d5;
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1rem;
+    }
+}
+
+.press-center__selected-news-heading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6.8rem;
+    line-height: 8.2rem;
+    letter-spacing: 0.02em;
+    color: #464646;
+    margin-bottom: 3rem;
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+}
+
+.press-center__selected-news-read-more {
+    display: inline-flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 135%;
+    letter-spacing: 0.02em;
+    color: var(--primary-color);
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    svg {
+        flex-shrink: 0;
+        width: 2.2rem;
+        height: 2.2rem;
+        margin-left: 0.7rem;
+        fill: currentColor;
+
+        @include breakpoint(mobile) {
+            width: 1.8rem;
+            height: 1.8rem;
+            margin-left: 0.5rem;
+        }
+    }
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+}
+
+.press-center__filters {
+    margin-bottom: 5rem;
+    border-top: 1px solid rgba(#464646, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+
+      
+      
+    }
+}
+
+.press-center__filters-categories-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    @include breakpoint(mobile) {
+        flex-wrap: nowrap;
+        gap: 2rem;
+        &::after {
+            content: '';
+            width: 1px;
+            height: 1px;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.press-center__filters-categories-list-item {
+    flex-shrink: 0;
+}
+
+.press-center__filters-categories {
+    @include breakpoint(mobile) {
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        padding-top: 1.5px;
+        margin-top: -1.5px;
+        margin-left: calc(-1 * var(--content-padding));
+        margin-right: calc(-1 * var(--content-padding));
+        padding-left: var(--content-padding);
+        padding-right: var(--content-padding);
+
+        @include noScrollbar();
+    }
+}
+
+.press-center__filters-categories-link {
+    padding: 2.4rem 0.7rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(#244a9a, 0.5);
+    position: relative;
+    white-space: nowrap;
+    display: block;
+
+    @include breakpoint(mobile) {
+        padding-top: 1.8rem;
+        padding-bottom: 1.8rem;
+    }
+    &:link,
+    &:visited {
+        color: rgba(#244a9a, 0.5);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 2px;
+        border-radius: 4px;
+        background-color: #244a9a;
+        transition: opacity 0.2s;
+        margin-top: -1.5px;
+        opacity: 0;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: #244a9a;
+    }
+
+    &.active {
+        color: #244a9a;
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+.press-center__date {
+    margin-left: 3rem;
+
+    @include breakpoint(mobile) {
+        margin-left: 0;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.press-center__catalog-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 2rem;
+    grid-row-gap: 8rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 3rem;
+    }
+}
+
+.press-center__catalog-list-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.press-center__catalog-card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    .no-touch &:hover,
+    .touch &:active {
+        .press-center__catalog-card-title {
+            color: var(--primary-color);
+        }
+    }
+}
+
+.press-center__catalog-card-image-container {
+    position: relative;
+    margin-bottom: 3rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 1.5rem;
+    }
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+    }
+}
+
+.press-center__catalog-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.press-center__catalog-card-info {
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #a1b3d5;
+    margin-bottom: 2rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 1rem;
+    }
+}
+
+.press-center__catalog-card-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.8rem;
+    letter-spacing: 0.02em;
+    color: #464646;
+    margin-bottom: 1.5rem;
+    transition: color 0.2s;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+}
+
+.press-center__catalog-card-text {
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 2.9rem;
+    letter-spacing: 0.02em;
+    color: #464646;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.press-center__catalog-card-show-more {
+    display: inline-flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 135%;
+    letter-spacing: 0.02em;
+    color: #ff772b;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    svg {
+        flex-shrink: 0;
+        width: 2.2rem;
+        height: 2.2rem;
+        margin-left: 0.7rem;
+        fill: currentColor;
+        @include breakpoint(mobile) {
+            width: 1.8rem;
+            height: 1.8rem;
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+.press-center__date {
+    position: relative;
+
+    table,
+    thead,
+    tbody {
+        display: block;
+    }
+
+    .datepicker.dropdown-menu {
+        top: 100% !important;
+        right: 0 !important;
+        left: auto !important;
+        bottom: auto !important;
+        margin-top: 1rem;
+        border-radius: 1rem;
+        border: none;
+        font-size: 16px;
+        line-height: 25px;
+
+        padding: 10px;
+        width: 260px;
+        background: #ffffff;
+        box-shadow: 0px 4px 54px rgba(17, 31, 43, 0.03);
+        @include breakpoint(mobile) {
+            top: 100% !important;
+            right: auto !important;
+            left: 0 !important;
+            bottom: auto !important;
+        }
+    }
+
+    &:nth-child(even) {
+        @include breakpoint(mobile) {
+            .datepicker.dropdown-menu {
+                left: auto !important;
+                right: 0;
+            }
+        }
+    }
+
+    .datepicker-dropdown:before,
+    .datepicker-dropdown:after {
+        display: none;
+    }
+
+    .datepicker table tr td.active,
+    .datepicker table tr td.active.disabled,
+    .datepicker table tr td.active.disabled:hover,
+    .datepicker table tr td.active:hover {
+        text-shadow: none;
+        background: var(--primary-color);
+    }
+
+    .datepicker table tr td span.active.active,
+    .datepicker table tr td span.active.disabled,
+    .datepicker table tr td span.active.disabled.active,
+    .datepicker table tr td span.active.disabled.disabled,
+    .datepicker table tr td span.active.disabled:active,
+    .datepicker table tr td span.active.disabled:hover,
+    .datepicker table tr td span.active.disabled:hover.active,
+    .datepicker table tr td span.active.disabled:hover.disabled,
+    .datepicker table tr td span.active.disabled:hover:active,
+    .datepicker table tr td span.active.disabled:hover:hover,
+    .datepicker table tr td span.active.disabled:hover[disabled],
+    .datepicker table tr td span.active.disabled[disabled],
+    .datepicker table tr td span.active:active,
+    .datepicker table tr td span.active:hover,
+    .datepicker table tr td span.active:hover.active,
+    .datepicker table tr td span.active:hover.disabled,
+    .datepicker table tr td span.active:hover:active,
+    .datepicker table tr td span.active:hover:hover,
+    .datepicker table tr td span.active:hover[disabled],
+    .datepicker table tr td span.active[disabled] {
+        background: var(--primary-color);
+        color: white;
+        text-shadow: none;
+    }
+
+    .datepicker table tr td span.active,
+    .datepicker table tr td span.active.disabled,
+    .datepicker table tr td span.active.disabled:hover,
+    .datepicker table tr td span.active:hover {
+        background: var(--primary-color);
+        color: white;
+        text-shadow: none;
+    }
+
+    .datepicker table tr td span {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 29px;
+        color: rgba(#244a9a, 0.5);
+        transition: color 0.2s;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+
+    .datepicker table tr td span:hover {
+        color: var(--primary-color);
+        background: transparent;
+    }
+
+    .datepicker table tr td span.focused {
+        color: #244a9a;
+        font-weight: 400;
+    }
+
+    .datepicker table tr {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+
+        [colspan='5'] {
+            grid-column: span 5;
+        }
+        [colspan='7'] {
+            grid-column: span 7;
+        }
+    }
+
+    .datepicker .datepicker-switch {
+        width: auto;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.02em;
+        color: #244a9a;
+        transition: color 0.2s, background-color 0.2s;
+        padding: 10px 5px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+    }
+
+    .datepicker.datepicker-inline td,
+    .datepicker.datepicker-inline th,
+    .datepicker.dropdown-menu td,
+    .datepicker.dropdown-menu th {
+        padding: 0;
+    }
+
+    .datepicker td,
+    .datepicker th {
+        width: auto;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .datepicker table tr [colspan='7'] {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-column: span 7;
+        grid-gap: 8px;
+        padding: 14px 0;
+    }
+
+    .datepicker table tr td span {
+        width: auto;
+        margin: 0;
+    }
+
+    thead {
+        display: block;
+    }
+
+    .dow {
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 29px;
+        color: #244a9a;
+    }
+
+    .day {
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 29px;
+        color: #244a9a;
+        border-radius: 5px !important;
+        transition: color 0.2s, background-color 0.2s;
+    }
+
+    .datepicker table tr td.day:not(.active):hover {
+        background: transparent;
+        color: var(--primary-color);
+    }
+
+    tbody {
+        border-top: 1px solid rgba(#464646, 0.2);
+    }
+
+    .datepicker table tr td.new,
+    .datepicker table tr td.old {
+        color: rgba(36, 74, 154, 0.5);
+    }
+
+    .datepicker .datepicker-switch:hover,
+    .datepicker .next:hover,
+    .datepicker .prev:hover,
+    .datepicker table tr td span.focused,
+    .datepicker table tr td span:hover,
+    .datepicker tfoot tr th:hover {
+        background: transparent;
+    }
+
+    .prev,
+    .next {
+        aspect-ratio: 1;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+
+        svg {
+            width: 80%;
+            height: auto;
+            // position: absolute;
+            // left: 50%;
+            // top: 50%;
+            // transform: translate(-50%, -50%);
+            // width: 80%;
+            // height: 80%;
+            fill: #dae0e3;
+            transition: fill 0.2s;
+        }
+
+        &:hover {
+            background: transparent;
+            svg {
+                fill: #244a9a;
+            }
+        }
+    }
+
+    .prev {
+        svg {
+            margin-right: auto;
+        }
+    }
+
+    .next {
+        svg {
+            margin-left: auto;
+        }
+    }
+}
+
+.press-center__date-select-input-label {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 0.8rem 1.4rem;
+    color: #244a9a;
+    background: #d9e6ff;
+    border-radius: 1.8rem;
+    cursor: pointer;
+    svg {
+        width: 1.8rem;
+        height: 1.8rem;
+        fill: #244a9a;
+        flex-shrink: 0;
+        margin-right: 1rem;
+    }
+}
+
+.press-center__date-select-input {
+    width: 7rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #244a9a;
+    pointer-events: none;
+    @include placeholder {
+        color: #244a9a;
+    }
+
+    &:placeholder-shown {
+        width: 3.5rem;
+    }
+}
