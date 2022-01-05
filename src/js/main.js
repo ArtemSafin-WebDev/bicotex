@@ -30,6 +30,7 @@ import productGallery from './productGallery';
 import otherNews from './otherNews';
 import gallerySlider from './gallerySlider';
 import cookies from './cookies';
+import search from './search';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -65,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     otherNews();
     gallerySlider();
     cookies();
+    search();
 });
 
 window.addEventListener('load', function() {

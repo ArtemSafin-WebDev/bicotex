@@ -1,4 +1,29 @@
 <header class="page-header {{#if whiteHeader}} page-header--white {{/if}}">
+    <div class="page-header__search-panel">
+        <div class="container container--wide">
+            <div class="page-header__search-panel-grid">
+                <div class="page-header__search-panel-inner">
+                    <div class="page-header__search-panel-content">
+
+
+                        <form action="/" method="get" class="page-header__search-panel-form">
+                            <input type="search" class="page-header__search-panel-input" placeholder="Поиск по сайту">
+                            <button class="page-header__search-panel-submit" type="submit">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-large-search">
+                                    <use xlink:href="#large-search"></use>
+                                </svg>
+                            </button>
+                            <button class="page-header__search-panel-close">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-close-search">
+                                    <use xlink:href="#close-search"></use>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container container--wide">
         <div class="page-header__row">
             <div class="page-header__languages">
@@ -47,6 +72,7 @@
                             </li>
                         </ul>
                     </nav>
+
                     <a href="#" class="page-header__search-link">
                         <svg width="14" height="14" aria-hidden="true" class="icon-search">
                             <use xlink:href="#search"></use>
