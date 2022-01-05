@@ -29,6 +29,7 @@ import similarProducts from './similarProducts';
 import productGallery from './productGallery';
 import otherNews from './otherNews';
 import gallerySlider from './gallerySlider';
+import cookies from './cookies';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -63,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     productGallery();
     otherNews();
     gallerySlider();
+    cookies();
 });
 
 window.addEventListener('load', function() {
