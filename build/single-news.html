@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
-        Пресс-центр
+        Новость
     </title>
 </head>
 
@@ -85,96 +85,347 @@
         </header>        <main class="page-main">
 
 
-<section class="press-center">
+<section class="single-news">
     <div class="container">
-        <div class="press-center__grid">
-            <div class="press-center__inner">
-                <div class="press-center__breadcrumbs">
+        <div class="single-news__grid">
+            <div class="single-news__inner">
+                <div class="single-news__breadcrumbs">
                     <a href="#">
                         Главная
-                    </a>
-                    —
+                    </a> —
                     <a href="#">
                         О компании
-                    </a>
-                    —
+                    </a> —
                     <a href="#">
                         Пресс-центр
                     </a>
                 </div>
-                <h1 class="press-center__main-heading">
-                    Пресс-центр
-                </h1>
-                <div class="press-center__selected-news">
-                    <div class="press-center__selected-news-row">
-                        <div class="press-center__selected-news-col">
-                            <img data-src="img/selected-news.jpg" alt=""
-                                class="press-center__selected-news-image lazyload">
-                        </div>
-                        <div class="press-center__selected-news-col">
-                            <div class="press-center__selected-news-info">
-                                выставки — 08 ОКТЯБРЯ 2021
-                            </div>
-                            <h2 class="press-center__selected-news-heading">
-                                Приглашаем на выставку CleanExpo Moscow PULIRE
-                            </h2>
-                            <a href="#" class="press-center__selected-news-read-more">
-                                Подробнее <svg width="14" height="14" aria-hidden="true"
-                                    class="icon-press-center-arrow">
-                                    <use xlink:href="#press-center-arrow"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="press-center__filters">
-                    <div class="press-center__filters-categories">
-                        <ul class="press-center__filters-categories-list">
-                            <li class="press-center__filters-categories-list-item">
-                                <a href="#" class="press-center__filters-categories-link active">
-                                    Все
-                                </a>
-                            </li>
-                            <li class="press-center__filters-categories-list-item">
-                                <a href="#" class="press-center__filters-categories-link">
-                                    Выставки
-                                </a>
-                            </li>
-                            <li class="press-center__filters-categories-list-item">
-                                <a href="#" class="press-center__filters-categories-link">
-                                    О компании
-                                </a>
-                            </li>
-                            <li class="press-center__filters-categories-list-item">
-                                <a href="#" class="press-center__filters-categories-link">
-                                    СМИ о нас
-                                </a>
-                            </li>
-                            <li class="press-center__filters-categories-list-item">
-                                <a href="#" class="press-center__filters-categories-link">
-                                    Производство
-                                </a>
-                            </li>
-                            <li class="press-center__filters-categories-list-item">
-                                <a href="#" class="press-center__filters-categories-link">
-                                    Фото и видео
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="press-center__date" id="picker-container">
-                        <label class="press-center__date-select-input-label">
-                            <svg width="14" height="14" aria-hidden="true" class="icon-calendar">
-                                <use xlink:href="#calendar"></use>
+                <div class="single-news__layout">
+                    <div class="single-news__layout-sidebar">
+                        <a href="#" class="single-news__back-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-back-arrow">
+                                <use xlink:href="#back-arrow"></use>
                             </svg>
-                            <input type="text" class="press-center__date-select-input js-datepicker"
-                                data-container="#picker-container" placeholder="Дата" readonly>
-
-                        </label>
+                            Назад
+                        </a>
+                    </div>
+                    <div class="single-news__layout-main">
+                        <h1 class="single-news__main-heading">
+                            Приглашаем на выставку CleanExpo Moscow PULIRE
+                        </h1>
+                        <div class="single-news__info">
+                            выставки — 08 ОКТЯБРЯ 2021
+                        </div>
+                        <img src="img/detail-image.jpg" alt="" class="single-news__preview-image">
+                        <div class="single-news__content">
+                            <h3>
+                                HouseHold Expo
+                            </h3>
+                            <p>
+                                HouseHold Expo — крупнейшая и единственная на рынке специализированная выставка нонфуд
+                                товаров, посуды, подарков, хозяйственных товаров, товаров для дома и дачи,
+                                профессиональной и бытовой химии. Ассоциация торговых выставок и ярмарок Германии (AUMA)
+                                характеризует HouseHold Expo как наиболее эффективную экспозицию товаров для дома на
+                                территории России.
+                            </p>
+                            <p>
+                                Международная промышленная выставка HouseHold Expo – единственная В2В выставка на
+                                территории России, наиболее полно представляющая российский рынок нонфуд товаров,
+                                товаров для дома и загородной жизни, подарков и предметов интерьера.
+                            </p>
+                            <p>
+                                Организаторы выставки: ООО «МОККА Экспо Групп», ГК Майер – член Всемирной ассоциации
+                                выставочной индустрии (UFI). При официальной поддержке Российского союза промышленников
+                                и предпринимателей и Торгово-промышленной палаты РФ.
+                            </p>
+                            <div class="single-news__gallery-slider js-gallery-slider">
+                                <div class="single-news__gallery-slider-main">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="single-news__gallery-slider-main-card">
+                                                    <img data-src="img/gallery.jpg" alt=""
+                                                        class="single-news__gallery-slider-main-card-image lazyload">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="single-news__gallery-slider-main-card">
+                                                    <img data-src="img/gallery.jpg" alt=""
+                                                        class="single-news__gallery-slider-main-card-image lazyload">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="single-news__gallery-slider-main-card">
+                                                    <img data-src="img/gallery.jpg" alt=""
+                                                        class="single-news__gallery-slider-main-card-image lazyload">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="single-news__gallery-slider-main-card">
+                                                    <img data-src="img/gallery.jpg" alt=""
+                                                        class="single-news__gallery-slider-main-card-image lazyload">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="single-news__gallery-slider-main-card">
+                                                    <img data-src="img/gallery.jpg" alt=""
+                                                        class="single-news__gallery-slider-main-card-image lazyload">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="single-news__gallery-slider-main-card">
+                                                    <img data-src="img/gallery.jpg" alt=""
+                                                        class="single-news__gallery-slider-main-card-image lazyload">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="single-news__gallery-slider-main-card">
+                                                    <img data-src="img/gallery.jpg" alt=""
+                                                        class="single-news__gallery-slider-main-card-image lazyload">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="single-news__gallery-slider-main-card">
+                                                    <img data-src="img/gallery.jpg" alt=""
+                                                        class="single-news__gallery-slider-main-card-image lazyload">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="single-news__gallery-slider-main-card">
+                                                    <img data-src="img/gallery.jpg" alt=""
+                                                        class="single-news__gallery-slider-main-card-image lazyload">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="single-news__gallery-slider-main-card">
+                                                    <img data-src="img/gallery.jpg" alt=""
+                                                        class="single-news__gallery-slider-main-card-image lazyload">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="single-news__gallery-slider-main-card">
+                                                    <img data-src="img/gallery.jpg" alt=""
+                                                        class="single-news__gallery-slider-main-card-image lazyload">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="single-news__gallery-slider-main-card">
+                                                    <img data-src="img/gallery.jpg" alt=""
+                                                        class="single-news__gallery-slider-main-card-image lazyload">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="single-news__gallery-slider-main-card">
+                                                    <img data-src="img/gallery.jpg" alt=""
+                                                        class="single-news__gallery-slider-main-card-image lazyload">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="single-news__gallery-slider-main-card">
+                                                    <img data-src="img/gallery.jpg" alt=""
+                                                        class="single-news__gallery-slider-main-card-image lazyload">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="single-news__gallery-slider-main-card">
+                                                    <img data-src="img/gallery.jpg" alt=""
+                                                        class="single-news__gallery-slider-main-card-image lazyload">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="single-news__gallery-slider-main-card">
+                                                    <img data-src="img/gallery.jpg" alt=""
+                                                        class="single-news__gallery-slider-main-card-image lazyload">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-news__gallery-slider-thumbs">
+                                    <button
+                                        class="single-news__gallery-slider-arrow single-news__gallery-slider-arrow--prev">
+                                        <svg width="14" height="14" aria-hidden="true"
+                                            class="icon-gallery-slider-arrow-prev">
+                                            <use xlink:href="#gallery-slider-arrow-prev"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="single-news__gallery-slider-thumbs-inner">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="single-news__gallery-slider-thumbs-card">
+                                                        <img src="img/gallery-thumbs/1.jpg" alt=""
+                                                            class="single-news__gallery-slider-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="single-news__gallery-slider-thumbs-card">
+                                                        <img src="img/gallery-thumbs/2.jpg" alt=""
+                                                            class="single-news__gallery-slider-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="single-news__gallery-slider-thumbs-card">
+                                                        <img src="img/gallery-thumbs/3.jpg" alt=""
+                                                            class="single-news__gallery-slider-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="single-news__gallery-slider-thumbs-card">
+                                                        <img src="img/gallery-thumbs/4.jpg" alt=""
+                                                            class="single-news__gallery-slider-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="single-news__gallery-slider-thumbs-card">
+                                                        <img src="img/gallery-thumbs/1.jpg" alt=""
+                                                            class="single-news__gallery-slider-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="single-news__gallery-slider-thumbs-card">
+                                                        <img src="img/gallery-thumbs/2.jpg" alt=""
+                                                            class="single-news__gallery-slider-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="single-news__gallery-slider-thumbs-card">
+                                                        <img src="img/gallery-thumbs/3.jpg" alt=""
+                                                            class="single-news__gallery-slider-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="single-news__gallery-slider-thumbs-card">
+                                                        <img src="img/gallery-thumbs/4.jpg" alt=""
+                                                            class="single-news__gallery-slider-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="single-news__gallery-slider-thumbs-card">
+                                                        <img src="img/gallery-thumbs/1.jpg" alt=""
+                                                            class="single-news__gallery-slider-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="single-news__gallery-slider-thumbs-card">
+                                                        <img src="img/gallery-thumbs/2.jpg" alt=""
+                                                            class="single-news__gallery-slider-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="single-news__gallery-slider-thumbs-card">
+                                                        <img src="img/gallery-thumbs/3.jpg" alt=""
+                                                            class="single-news__gallery-slider-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="single-news__gallery-slider-thumbs-card">
+                                                        <img src="img/gallery-thumbs/4.jpg" alt=""
+                                                            class="single-news__gallery-slider-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="single-news__gallery-slider-thumbs-card">
+                                                        <img src="img/gallery-thumbs/1.jpg" alt=""
+                                                            class="single-news__gallery-slider-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="single-news__gallery-slider-thumbs-card">
+                                                        <img src="img/gallery-thumbs/2.jpg" alt=""
+                                                            class="single-news__gallery-slider-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="single-news__gallery-slider-thumbs-card">
+                                                        <img src="img/gallery-thumbs/3.jpg" alt=""
+                                                            class="single-news__gallery-slider-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="single-news__gallery-slider-thumbs-card">
+                                                        <img src="img/gallery-thumbs/4.jpg" alt=""
+                                                            class="single-news__gallery-slider-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="single-news__gallery-slider-arrow single-news__gallery-slider-arrow--next">
+                                        <svg width="14" height="14" aria-hidden="true"
+                                            class="icon-gallery-slider-arrow-next">
+                                            <use xlink:href="#gallery-slider-arrow-next"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <h3>
+                                HouseHold Expo
+                            </h3>
+                            <ul>
+                                <li>
+                                    Впитывает в 7 раз больше влаги, чем собственный вес.
+                                </li>
+                                <li>
+                                    Вритягивает мельчайшие частицы пыли, волосы домашних животных
+                                </li>
+                                <li>
+                                    Идеально удаляет пыль, жир и другие загрязнения.
+                                </li>
+                                <li>
+                                    Полирует и очищает стеклянные, хромированные поверхности и зеркала
+                                </li>
+                            </ul>
+                            <h3>
+                                HouseHold Expo
+                            </h3>
+                            <ol>
+                                <li>
+                                    Впитывает в 7 раз больше влаги, чем собственный вес.
+                                </li>
+                                <li>
+                                    Вритягивает мельчайшие частицы пыли, волосы домашних животных
+                                </li>
+                                <li>
+                                    Идеально удаляет пыль, жир и другие загрязнения.
+                                </li>
+                                <li>
+                                    Полирует и очищает стеклянные, хромированные поверхности и зеркала
+                                </li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
-                <ul class="press-center__catalog-list">
-                    <li class="press-center__catalog-list-item">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="other-news js-other-news">
+    <div class="container">
+        <div class="other-news__top-row">
+            <h2 class="other-news__heading">
+                Другие новости
+            </h2>
+            <div class="other-news__arrows">
+                <button class="other-news__arrow other-news__arrow--prev">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-news-slider-arrow-left">
+                        <use xlink:href="#news-slider-arrow-left"></use>
+                    </svg>
+                </button>
+                <button class="other-news__arrow other-news__arrow--next">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-news-slider-arrow-right">
+                        <use xlink:href="#news-slider-arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="other-news__slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
                         <a href="#" class="press-center__catalog-card">
                             <div class="press-center__catalog-card-image-container">
                                 <img data-src="img/press-center/1.jpg" alt=""
@@ -199,8 +450,8 @@
                                 </svg>
                             </div>
                         </a>
-                    </li>
-                    <li class="press-center__catalog-list-item">
+                    </div>
+                    <div class="swiper-slide">
                         <a href="#" class="press-center__catalog-card">
                             <div class="press-center__catalog-card-image-container">
                                 <img data-src="img/press-center/2.jpg" alt=""
@@ -225,8 +476,8 @@
                                 </svg>
                             </div>
                         </a>
-                    </li>
-                    <li class="press-center__catalog-list-item">
+                    </div>
+                    <div class="swiper-slide">
                         <a href="#" class="press-center__catalog-card">
                             <div class="press-center__catalog-card-image-container">
                                 <img data-src="img/press-center/3.jpg" alt=""
@@ -251,8 +502,8 @@
                                 </svg>
                             </div>
                         </a>
-                    </li>
-                    <li class="press-center__catalog-list-item">
+                    </div>
+                    <div class="swiper-slide">
                         <a href="#" class="press-center__catalog-card">
                             <div class="press-center__catalog-card-image-container">
                                 <img data-src="img/press-center/4.jpg" alt=""
@@ -277,11 +528,37 @@
                                 </svg>
                             </div>
                         </a>
-                    </li>
-                    <li class="press-center__catalog-list-item">
+                    </div>
+                    <div class="swiper-slide">
                         <a href="#" class="press-center__catalog-card">
                             <div class="press-center__catalog-card-image-container">
-                                <img data-src="img/press-center/5.jpg" alt=""
+                                <img data-src="img/press-center/1.jpg" alt=""
+                                    class="press-center__catalog-card-image lazyload">
+                            </div>
+                            <div class="press-center__catalog-card-info">
+                                выставки — 17 сентября 2021
+                            </div>
+                            <h4 class="press-center__catalog-card-title">
+                                Выставка HouseHold Expo подошла к финалу
+                            </h4>
+                            <div class="press-center__catalog-card-text">
+                                <p>
+                                    За 2 дня мы успели познакомитьсяс потенциальными клиентамии представить им готовую
+                                    продукцию бренда bicotex
+                                </p>
+                            </div>
+                            <div class="press-center__catalog-card-show-more">
+                                Подробнее
+                                <svg width="14" height="14" aria-hidden="true" class="icon-press-center-arrow">
+                                    <use xlink:href="#press-center-arrow"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="press-center__catalog-card">
+                            <div class="press-center__catalog-card-image-container">
+                                <img data-src="img/press-center/2.jpg" alt=""
                                     class="press-center__catalog-card-image lazyload">
                             </div>
                             <div class="press-center__catalog-card-info">
@@ -303,11 +580,11 @@
                                 </svg>
                             </div>
                         </a>
-                    </li>
-                    <li class="press-center__catalog-list-item">
+                    </div>
+                    <div class="swiper-slide">
                         <a href="#" class="press-center__catalog-card">
                             <div class="press-center__catalog-card-image-container">
-                                <img data-src="img/press-center/6.jpg" alt=""
+                                <img data-src="img/press-center/3.jpg" alt=""
                                     class="press-center__catalog-card-image lazyload">
                             </div>
                             <div class="press-center__catalog-card-info">
@@ -329,11 +606,11 @@
                                 </svg>
                             </div>
                         </a>
-                    </li>
-                    <li class="press-center__catalog-list-item">
+                    </div>
+                    <div class="swiper-slide">
                         <a href="#" class="press-center__catalog-card">
                             <div class="press-center__catalog-card-image-container">
-                                <img data-src="img/press-center/7.jpg" alt=""
+                                <img data-src="img/press-center/4.jpg" alt=""
                                     class="press-center__catalog-card-image lazyload">
                             </div>
                             <div class="press-center__catalog-card-info">
@@ -355,95 +632,13 @@
                                 </svg>
                             </div>
                         </a>
-                    </li>
-                    <li class="press-center__catalog-list-item">
-                        <a href="#" class="press-center__catalog-card">
-                            <div class="press-center__catalog-card-image-container">
-                                <img data-src="img/press-center/8.jpg" alt=""
-                                    class="press-center__catalog-card-image lazyload">
-                            </div>
-                            <div class="press-center__catalog-card-info">
-                                выставки — 17 сентября 2021
-                            </div>
-                            <h4 class="press-center__catalog-card-title">
-                                10 выставка «Интерткань-2021. Осень» подошла к концу
-                            </h4>
-                            <div class="press-center__catalog-card-text">
-                                <p>
-                                    Мы были рады принять в ней участие и познакомить клиентов и партнеров с первым в
-                                    России заводом полного цикла по производству микрофибры.
-                                </p>
-                            </div>
-                            <div class="press-center__catalog-card-show-more">
-                                Подробнее
-                                <svg width="14" height="14" aria-hidden="true" class="icon-press-center-arrow">
-                                    <use xlink:href="#press-center-arrow"></use>
-                                </svg>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="press-center__catalog-list-item">
-                        <a href="#" class="press-center__catalog-card">
-                            <div class="press-center__catalog-card-image-container">
-                                <img data-src="img/press-center/9.jpg" alt=""
-                                    class="press-center__catalog-card-image lazyload">
-                            </div>
-                            <div class="press-center__catalog-card-info">
-                                выставки — 17 сентября 2021
-                            </div>
-                            <h4 class="press-center__catalog-card-title">
-                                Запуск производства микрофибры
-                            </h4>
-                            <div class="press-center__catalog-card-text">
-                                <p>
-                                    Специально для организации этого производства был выкуплен земельный участок,
-                                    площадью 96 890 кв. м. и произведен капитальный ремонт производственного цеха,
-                                </p>
-                            </div>
-                            <div class="press-center__catalog-card-show-more">
-                                Подробнее
-                                <svg width="14" height="14" aria-hidden="true" class="icon-press-center-arrow">
-                                    <use xlink:href="#press-center-arrow"></use>
-                                </svg>
-                            </div>
-                        </a>
-                    </li>
-
-                </ul>
-                <div class="catalog__pagination">
-                    <a href="#" class="catalog__pagination-prev">
-                        <svg width="14" height="14" aria-hidden="true" class="icon-pagination-prev">
-                            <use xlink:href="#pagination-prev"></use>
-                        </svg>
-                    </a>
-                    <div class="catalog__pagination-links">
-                        <a href="#" class="catalog__pagination-link active">
-                            1
-                        </a>
-                        <a href="#" class="catalog__pagination-link">
-                            2
-                        </a>
-                        <a href="#" class="catalog__pagination-link">
-                            3
-                        </a>
-                        <a href="#" class="catalog__pagination-link">
-                            4
-                        </a>
-                        <a href="#" class="catalog__pagination-link">
-                            5
-                        </a>
                     </div>
-                    <a href="#" class="catalog__pagination-next">
-                        <svg width="14" height="14" aria-hidden="true" class="icon-pagination-next">
-                            <use xlink:href="#pagination-next"></use>
-                        </svg>
-                    </a>
                 </div>
             </div>
         </div>
+
     </div>
 </section>
-
 <section class="offices">
     <div class="container">
         <div class="offices__content">

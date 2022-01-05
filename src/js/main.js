@@ -27,6 +27,8 @@ import fixedHeader from './fixedHeader';
 import tabs from './tabs';
 import similarProducts from './similarProducts';
 import productGallery from './productGallery';
+import otherNews from './otherNews';
+import gallerySlider from './gallerySlider';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -59,6 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
     tabs();
     similarProducts();
     productGallery();
+    otherNews();
+    gallerySlider();
 });
 
 window.addEventListener('load', function() {
