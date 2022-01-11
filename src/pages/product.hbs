@@ -484,7 +484,8 @@
                     <div class="product__form-controls">
                         <label class="product__form-checkbox">
 
-                            <input type="checkbox" name="policy" class="product__form-checkbox-input" checked="" required="">
+                            <input type="checkbox" name="policy" class="product__form-checkbox-input" checked=""
+                                required="">
                             <span class="product__form-checkbox-mark">
 
                             </span>
@@ -536,9 +537,24 @@
 
 <section class="similar-products js-similar-products">
     <div class="container">
-        <h2 class="similar-products__heading">
-            Похожие товары
-        </h2>
+        <div class="similar-products__top-row">
+            <h2 class="similar-products__heading">
+                Похожие товары
+            </h2>
+            <div class="similar-products__arrows">
+                <button class="similar-products__arrow similar-products__arrow--prev">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-slider-arrow-left">
+                        <use xlink:href="#products-slider-arrow-left"></use>
+                    </svg>
+                </button>
+                <button class="similar-products__arrow similar-products__arrow--next">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-slider-arrow-right">
+                        <use xlink:href="#products-slider-arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
         <div class="similar-products__slider">
             <div class="swiper-container">
                 <div class="swiper-wrapper">

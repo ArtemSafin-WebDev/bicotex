@@ -14,6 +14,7 @@ export default function search() {
         searchClose.addEventListener('click', event => {
             event.preventDefault();
             header.classList.remove('search-shown');
+            searchLink.classList.remove('active');
         });
     }
 

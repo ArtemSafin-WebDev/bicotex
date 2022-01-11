@@ -31,6 +31,7 @@ import otherNews from './otherNews';
 import gallerySlider from './gallerySlider';
 import cookies from './cookies';
 import search from './search';
+import historySlider from './historySlider';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -67,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     gallerySlider();
     cookies();
     search();
+    historySlider();
 });
 
 window.addEventListener('load', function() {
