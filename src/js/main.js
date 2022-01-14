@@ -32,6 +32,8 @@ import gallerySlider from './gallerySlider';
 import cookies from './cookies';
 import search from './search';
 import historySlider from './historySlider';
+import employeesSlider from './employeesSlider';
+import employeeText from './employeeText';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -69,6 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
     cookies();
     search();
     historySlider();
+    employeesSlider();
+    employeeText();
 });
 
 window.addEventListener('load', function() {
