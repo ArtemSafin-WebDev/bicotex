@@ -34,6 +34,7 @@ import search from './search';
 import historySlider from './historySlider';
 import employeesSlider from './employeesSlider';
 import employeeText from './employeeText';
+import menu from './menu';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -73,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     historySlider();
     employeesSlider();
     employeeText();
+    menu();
 });
 
 window.addEventListener('load', function() {
