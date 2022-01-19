@@ -748,6 +748,8 @@
 .product__form-checkbox {
     display: flex;
     align-items: flex-start;
+    cursor: pointer;
+    user-select: none;
 }
 
 .product__form-checkbox-input {

@@ -7,6 +7,10 @@
     z-index: 80;
     transition: background-color 0.2s;
 
+    .modal-open & {
+        padding-right: var(--sb-width, 0);
+    }
+
     &.fixed {
         background-color: white;
     }

@@ -101,7 +101,7 @@
                             <a href="tel:8 800 201 32 53" class="page-header__burger-menu-phone-link">88002013253</a>
                             <a href="mailto:info@bicotex.ru" class="page-header__burger-menu-mail-link">info@bicotex.ru</a>
                         </div>
-                        <a href="#" class="page-header__burger-menu-contact-link">
+                        <a href="#callback-modal" class="page-header__burger-menu-contact-link js-open-modal">
                             Связаться
                         </a>
                     </div>
@@ -159,7 +159,7 @@
                                 <a href="mailto:info@bicotex.ru"
                                     class="page-header__mail-link page-header__mail-link--underline">info@bicotex.ru</a>
                             </div>
-                            <a href="#" class="page-header__contact-link">
+                            <a href="#callback-modal" class="page-header__contact-link js-open-modal">
                                 Связаться
                             </a>
                         </div>
@@ -926,6 +926,49 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="modal js-modal" id="callback-modal">
+            <div class="modal__inner modal__inner--callback">
+                <button class="modal__close js-close-modal">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-modal-close">
+                        <use xlink:href="#modal-close"></use>
+                    </svg>
+                </button>
+                <h3 class="modal__heading">
+                    Ответим на все ваши вопросы
+                </h3>
+                <div class="modal__heading-text">
+                    <p>
+                        Заполните форму и наш специалист свяжется с вами в течение 5 минут
+                    </p>
+                </div>
+                <form action="/" method="POST" class="modal__form" id="modal-form" data-need-validation="">
+                    <div class="modal__form-fields">
+                        <div class="modal__form-field">
+                            <input type="text" name="your-name" class="modal__form-input" required="" placeholder="Ваше имя">
+                        </div>
+                        <div class="modal__form-field">
+                            <input type="tel" name="your-phone" class="modal__form-input js-phone-input" required=""
+                                data-parsley-phone="" placeholder="Телефон">
+                        </div>
+        
+                    </div>
+                    <label class="modal__form-checkbox">
+        
+                        <input type="checkbox" name="policy" class="modal__form-checkbox-input" checked="" required="">
+                        <span class="modal__form-checkbox-mark">
+        
+                        </span>
+                        <span class="modal__form-checkbox-text">
+                            Я соглашаюсь с <a href="#">политикой конфиденциальности</a> и согласен на обработку
+                            персональных данных
+                        </span>
+                    </label>
+                    <button type="submit" class="modal__form-submit">
+                        Отправить
+                    </button>
+                </form>
             </div>
         </div>        <div class="cookies js-cookies">
             <div class="cookies__text">
