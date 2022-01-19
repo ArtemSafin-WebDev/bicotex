@@ -70,10 +70,10 @@
 }
 
 .production-page__image-block {
-    border-radius: 1rem;
-    overflow: hidden;
-    backface-visibility: hidden;
-    transform: translateZ(0);
+    // border-radius: 1rem;
+    // overflow: hidden;
+    // backface-visibility: hidden;
+    // transform: translateZ(0);
     color: white;
     position: relative;
     z-index: 1;
@@ -85,10 +85,10 @@
 
 .production-page__image-block-bg {
     position: absolute;
-    left: 0;
+    left: calc(-1 * (100vw - 100% - var(--sb-width)) / 2);
+    right: calc(-1 * (100vw - 100% - var(--sb-width)) / 2);
     top: 0;
-    width: 100%;
-    height: 100%;
+    bottom: 0;
     z-index: -1;
 
     &::after {
@@ -116,11 +116,11 @@
     flex-direction: column;
     justify-content: center;
     padding: 8rem 0;
-    min-height: 84rem;
+    min-height: 60rem;
 
     @include breakpoint(mobile) {
         min-height: auto;
-        padding: 5rem 2rem;
+        padding: 5rem 0rem;
     }
 }
 
