@@ -455,7 +455,7 @@
 
             </div>
             <div class="product__actions">
-                <form action="/" method="POST" class="product__form" data-need-validation="">
+                <form action="/" method="POST" class="product__form" data-need-validation="" id="product-form">
                     <h3 class="product__form-heading">
                         Оформить заказ на пробную партию
                     </h3>
@@ -473,9 +473,13 @@
                             <input type="tel" name="your-name" class="product__form-input js-phone-input" required=""
                                 placeholder="Телефон" data-parsley-phone="">
                         </div>
-                        <div class="product__form-field product__form-field--fullwidth">
+                        <div class="product__form-field">
                             <input type="email" name="your-email" class="product__form-input" required=""
                                 placeholder="Почта">
+                        </div>
+                        <div class="product__form-field">
+                            <input type="text" name="your-city" class="product__form-input" required=""
+                                placeholder="Город">
                         </div>
                         <div class="product__form-field product__form-field--fullwidth">
                             <input type="text" name="your-comment" class="product__form-input" placeholder="Коментарий">
@@ -497,6 +501,21 @@
                         <button class="product__form-submit" type="submit">
                             Отправить
                         </button>
+                    </div>
+                    <div class="product__form-success">
+                        <div class="product__form-success-ok">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-success-checkmark">
+                                <use xlink:href="#success-checkmark"></use>
+                            </svg>
+                        </div>
+                        <h4 class="product__form-success-heading">
+                            Спасибо вам за заявку
+                        </h4>
+                        <div class="product__form-success-text">
+                            <p>
+                                Ваша заявка отправлена на обработку. Наш специалист свяжется с вами в течение 5 минут и обсудит детали заказа!
+                            </p>
+                        </div>
                     </div>
                 </form>
                 <div class="product__marketplace">
@@ -706,145 +725,7 @@
     </div>
 </section>
 
-<section class="offices">
-    <div class="container">
-        <div class="offices__content">
-            <ul class="offices__departments-list">
-                <li class="offices__departments-list-item">
-                    <div class="offices__departments-block">
-                        <div class="offices__departments-block-col">
-                            <h3 class="offices__departments-block-heading">
-                                Отдел продаж
-                            </h3>
-                            <div class="offices__departments-block-heading-text">
-                                <p>
-                                    Главный менеджер
-                                </p>
-                            </div>
-                        </div>
-                        <div class="offices__departments-block-col">
-                            <ul class="offices__departments-block-contacts-list">
-                                <li class="offices__departments-block-contacts-list-item">
-                                    <a href="tel:+78002013253" class="offices__departments-block-contacts-link">
-                                        8 800 201 32 53
-                                    </a>
-                                    <div class="offices__departments-block-contacts-additional">
-                                        Доб. 6522
-                                    </div>
-                                </li>
-                                <li class="offices__departments-block-contacts-list-item">
-                                    <a href="mailto:info@bicotex.ru"
-                                        class="offices__departments-block-contacts-link offices__departments-block-contacts-link--underline">
-                                        info@bicotex.ru
-                                    </a>
 
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="offices__departments-list-item">
-                    <div class="offices__departments-block">
-                        <div class="offices__departments-block-col">
-                            <h3 class="offices__departments-block-heading">
-                                Отдел по снабжению и&nbsp;логистике
-                            </h3>
-                            <div class="offices__departments-block-heading-text">
-                                <p>
-                                    Главный менеджер
-                                </p>
-                            </div>
-                        </div>
-                        <div class="offices__departments-block-col">
-                            <ul class="offices__departments-block-contacts-list">
-                                <li class="offices__departments-block-contacts-list-item">
-                                    <a href="tel:+78002013253" class="offices__departments-block-contacts-link">
-                                        8 800 201 32 53
-                                    </a>
-                                    <div class="offices__departments-block-contacts-additional">
-                                        Доб. 6522
-                                    </div>
-                                </li>
-                                <li class="offices__departments-block-contacts-list-item">
-                                    <a href="mailto:info@bicotex.ru"
-                                        class="offices__departments-block-contacts-link offices__departments-block-contacts-link--underline">
-                                        info@bicotex.ru
-                                    </a>
-
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="offices__departments-list-item">
-                    <div class="offices__departments-block">
-                        <div class="offices__departments-block-col">
-                            <h3 class="offices__departments-block-heading">
-                                Отдел качества
-                            </h3>
-                            <div class="offices__departments-block-heading-text">
-                                <p>
-                                    Главный менеджер
-                                </p>
-                            </div>
-                        </div>
-                        <div class="offices__departments-block-col">
-                            <ul class="offices__departments-block-contacts-list">
-                                <li class="offices__departments-block-contacts-list-item">
-                                    <a href="tel:+78002013253" class="offices__departments-block-contacts-link">
-                                        8 800 201 32 53
-                                    </a>
-                                    <div class="offices__departments-block-contacts-additional">
-                                        Доб. 6522
-                                    </div>
-                                </li>
-                                <li class="offices__departments-block-contacts-list-item">
-                                    <a href="mailto:info@bicotex.ru"
-                                        class="offices__departments-block-contacts-link offices__departments-block-contacts-link--underline">
-                                        info@bicotex.ru
-                                    </a>
-
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="offices__departments-list-item">
-                    <div class="offices__departments-block">
-                        <div class="offices__departments-block-col">
-                            <h3 class="offices__departments-block-heading">
-                                Отдел персонала
-                            </h3>
-                            <div class="offices__departments-block-heading-text">
-                                <p>
-                                    Менеджер
-                                </p>
-                            </div>
-                        </div>
-                        <div class="offices__departments-block-col">
-                            <ul class="offices__departments-block-contacts-list">
-                                <li class="offices__departments-block-contacts-list-item">
-                                    <a href="tel:+78002013253" class="offices__departments-block-contacts-link">
-                                        8 800 201 32 53
-                                    </a>
-                                    <div class="offices__departments-block-contacts-additional">
-                                        Доб. 6522
-                                    </div>
-                                </li>
-                                <li class="offices__departments-block-contacts-list-item">
-                                    <a href="mailto:info@bicotex.ru"
-                                        class="offices__departments-block-contacts-link offices__departments-block-contacts-link--underline">
-                                        info@bicotex.ru
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
 
 {{/content}}
 {{/extend}}
