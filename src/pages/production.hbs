@@ -1,13 +1,17 @@
 {{#extend "layout"}}
 {{#content "main"}}
 
-
-<section class="production-page">
+<section class="photo-header">
+    <div class="photo-header__bg">
+        <img src="img/production-intro.jpg" alt="" class="photo-header__bg-image">
+    </div>
     <div class="container">
-        <div class="production-page__intro">
-            <div class="production-page__grid">
-                <div class="production-page__grid-inner">
-                    <div class="production-page__breadcrumbs">
+        <div class="photo-header__grid">
+            <div class="photo-header__grid-inner">
+                <div class="photo-header__content">
+
+
+                    <div class="photo-header__breadcrumbs">
                         <a href="#">
                             Главная
                         </a> —
@@ -15,32 +19,22 @@
                             Производство
                         </a>
                     </div>
-                    <h1 class="production-page__main-heading">
-                        Производство
+                    <h1 class="photo-header__main-heading">
+                       Производство
                     </h1>
-                </div>
-            </div>
-        </div>
-        <div class="production-page__image-block">
-            <div class="production-page__image-block-bg">
-                <img src="img/production-intro.jpg" alt="" class="production-page__image-block-bg-image">
-            </div>
-            <div class="production-page__grid">
-                <div class="production-page__grid-inner">
-                    <div class="production-page__image-block-content">
-                        <h2 class="production-page__image-block-title">
-                            Bicotex
-                        </h2>
-                        <div class="production-page__image-block-text">
-                            <p>
-                                это полный цикл производства микрофибры на одном заводе
-                            </p>
-                        </div>
+                    <div class="photo-header__main-heading-text">
+                        <p>
+                             Bicotex это полный цикл производства микрофибры на одном заводе
+                        </p>
                     </div>
                 </div>
             </div>
-
         </div>
+    </div>
+</section>
+<section class="production-page">
+    <div class="container">
+      
 
         <div class="production-page__equipment">
             <div class="production-page__grid">
@@ -52,7 +46,8 @@
                         <div class="production-page__equipment-card-content">
                             <div class="production-page__equipment-card-content-text">
                                 <p>
-                                    Вся продукция Bicotex производится на европейском оборудовании с соблюдением мировых стандартов качества
+                                    Вся продукция Bicotex производится на европейском оборудовании с соблюдением мировых
+                                    стандартов качества
                                 </p>
                             </div>
                         </div>
