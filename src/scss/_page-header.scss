@@ -300,54 +300,62 @@
 .page-header__nav {
     margin-right: 3.5rem;
 
+    & > ul {
+        display: flex;
+        align-items: center;
+        gap: 3.4rem;
+    
+        @include breakpoint(mobile) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        & > li {
+            & > a {
+                font-weight: 300;
+                font-size: 1.7rem;
+                letter-spacing: 0.02em;
+            
+                line-height: 130%;
+
+                &.current {
+                    color: var(--primary-color);
+                }
+            
+                @include breakpoint(mobile) {
+                    font-size: 1.6rem;
+                }
+            
+                .no-touch &:hover,
+                .touch &:active {
+                    color: var(--primary-color);
+                }
+            
+                .page-header--white:not(.fixed):not(.search-shown) & {
+                    color: white;
+                    &:link,
+                    &:visited {
+                        color: white;
+                    }
+            
+                    .no-touch &:hover,
+                    .touch &:active {
+                        color: rgba(white, 0.4);
+                    }
+                }
+            }
+        }
+    }
+
     @include breakpoint(mobile) {
         margin: 0;
         margin-bottom: 3rem;
     }
 }
 
-.page-header__nav-list {
-    display: flex;
-    align-items: center;
-    gap: 3.4rem;
 
-    @include breakpoint(mobile) {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 2rem;
-    }
-}
-
-.page-header__nav-link {
-    font-weight: 300;
-    font-size: 1.7rem;
-    letter-spacing: 0.02em;
-
-    line-height: 130%;
-
-    @include breakpoint(mobile) {
-        font-size: 1.6rem;
-    }
-
-    .no-touch &:hover,
-    .touch &:active {
-        color: var(--primary-color);
-    }
-
-    .page-header--white:not(.fixed):not(.search-shown) & {
-        color: white;
-        &:link,
-        &:visited {
-            color: white;
-        }
-
-        .no-touch &:hover,
-        .touch &:active {
-            color: rgba(white, 0.4);
-        }
-    }
-}
 
 .page-header__search-link {
     width: 2rem;
@@ -608,6 +616,10 @@
                 &:link,
                 &:visited {
                     color: #464646;
+                }
+
+                &.current {
+                    color: var(--primary-color);
                 }
             }
         }
