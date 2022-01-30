@@ -1,50 +1,3 @@
-*,
-*::after,
-*::before {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-
-:root {
-    --max-container-width: 150rem;
-    --max-wide-container-width: 163rem;
-    --content-padding: 2.5rem;
-    --primary-color: #ff772b;
-    --text-color: #17181A;
-    --bg-color: #f4f9fd;
-    --side-width: 14rem;
-    --suisse: 'Suisse Intl', sans-serif;
-   
-}
-
-html {
-    box-sizing: border-box;
-   
-    -webkit-text-size-adjust: 100%;
-    font-size: 10px;
-    font-size: clamp(5px, 0.52vw, 25px);
-  
-    
-
-    @include noHighlight();
-
-    @include breakpoint(mobile) {
-        font-size: 10px;
-    }
-}
-
-body {
-    font-size: 1.6rem;
-    line-height: 1.2;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-family: var(--suisse);
-    color: var(--text-color);
-    background-color: var(--bg-color);
-}
-
 main {
     display: block;
 }
@@ -179,23 +132,6 @@ td,
 th {
     text-align: left;
     vertical-align: top;
-}
-
-.visually-hidden {
-    @include visuallyHidden();
-}
-
-.no-scroll {
-    overflow-y: scroll;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    body {
-        height: auto;
-        overflow: hidden;
-    }
 }
 
 ::selection {
