@@ -1,6 +1,6 @@
 export default function fixedHeader() {
     const pageHeader = document.querySelector('.page-header');
-
+    if (!pageHeader) return;
 
     function fixHeader() {
         if (window.pageYOffset > 0) {
