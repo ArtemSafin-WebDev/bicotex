@@ -13,6 +13,7 @@ export default function events() {
             watchOverflow: true,
             spaceBetween: 20,
             speed: 400,
+            watchOverflow: true,
             navigation: {
                 nextEl: element.querySelector('.slider-arrows__btn--next'),
                 prevEl: element.querySelector('.slider-arrows__btn--prev')
