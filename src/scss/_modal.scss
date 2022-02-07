@@ -44,6 +44,7 @@
 
     @include breakpoint(mobile) {
         padding: 2rem;
+        border-radius: 1.5rem;
     }
 }
 

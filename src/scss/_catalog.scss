@@ -144,15 +144,12 @@
 }
 
 .catalog__sidebar-inner {
-    background: #ffffff;
-    border-radius: 1rem;
-    padding: 3rem;
-    padding-bottom: 6rem;
-    color: #464646;
-
-    @include breakpoint(mobile) {
-        padding: 2rem;
-       
+    @include breakpointMF(small-tablet) {
+        background: #ffffff;
+        border-radius: 1rem;
+        padding: 3rem;
+        padding-bottom: 6rem;
+        color: #464646;
     }
 }
 
@@ -538,5 +535,83 @@
 
     &:not(.active):hover {
         color: var(--primary-color);
+    }
+}
+
+.catalog__sidebar-filters-modal {
+    @include breakpoint(mobile) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        height: 100%;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        z-index: 400;
+        background: rgba(black, 0.6);
+        display: flex;
+        flex-direction: column;
+        padding: var(--content-padding);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+        &:not(.active) {
+            right: calc(-1 * var(--sb-width, 0));
+        }
+
+        &.active {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity 0.4s, visibility 0.4s;
+        }
+    }
+}
+
+.catalog__sidebar-filters {
+    .modal__close {
+        @include breakpointMF(small-tablet) {
+            display: none;
+        }
+    }
+    @include breakpoint(mobile) {
+        width: 100%;
+        background-color: #fff;
+        margin: auto;
+        background: #ffffff;
+        border-radius: 1rem;
+        max-width: 107.8rem;
+        padding: 8.5rem;
+        padding-top: 5.6rem;
+        color: #464646;
+        position: relative;
+        padding: 2rem;
+        border-radius: 1.5rem;
+      
+    }
+}
+
+
+.catalog__mobile-filters-link {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: #464646;
+    font-weight: 500;
+    justify-content: flex-end;
+    &:link,
+    &:visited {
+        color: #464646;
+    }
+    svg {
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+        fill: var(--primary-color);
+        margin-left: 1rem;
+    }
+    @include breakpointMF(small-tablet) {
+        display: none;
     }
 }

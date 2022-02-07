@@ -81,140 +81,157 @@
         <div class="catalog__layout">
             <div class="catalog__sidebar">
                 <div class="catalog__sidebar-inner">
-                    <form method="GET" action="/" class="catalog__sidebar-filters">
-                        <div class="catalog__sidebar-filters-group">
-                            <h4 class="catalog__sidebar-filters-group-title">
-                                Категория продукции
-                            </h4>
-                            <div class="catalog__sidebar-filters-checkboxes">
-                                <label class="catalog__sidebar-filters-checkbox">
-                                    <input type="checkbox" class="catalog__sidebar-filters-checkbox-input">
-                                    <span class="catalog__sidebar-filters-checkbox-mark">
-                                        <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
-                                            <use xlink:href="#checkmark"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="catalog__sidebar-filters-checkbox-text">
-                                        Насадки для швабры
-                                    </span>
-                                </label>
-                                <label class="catalog__sidebar-filters-checkbox">
-                                    <input type="checkbox" class="catalog__sidebar-filters-checkbox-input" checked="">
-                                    <span class="catalog__sidebar-filters-checkbox-mark">
-                                        <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
-                                            <use xlink:href="#checkmark"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="catalog__sidebar-filters-checkbox-text">
-                                        Насадки для швабры
-                                    </span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="catalog__sidebar-filters-group">
-                            <h4 class="catalog__sidebar-filters-group-title">
-                                Размеры
-                            </h4>
-                            <div class="catalog__sidebar-filters-checkboxes">
-                                <label class="catalog__sidebar-filters-checkbox">
-                                    <input type="checkbox" class="catalog__sidebar-filters-checkbox-input">
-                                    <span class="catalog__sidebar-filters-checkbox-mark">
-                                        <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
-                                            <use xlink:href="#checkmark"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="catalog__sidebar-filters-checkbox-text">
-                                        30х30 см
-                                    </span>
-                                </label>
-                                <label class="catalog__sidebar-filters-checkbox disabled">
-                                    <input type="checkbox" class="catalog__sidebar-filters-checkbox-input" disabled="">
-                                    <span class="catalog__sidebar-filters-checkbox-mark">
-                                        <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
-                                            <use xlink:href="#checkmark"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="catalog__sidebar-filters-checkbox-text">
-                                        35х35 см
-                                    </span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="catalog__sidebar-filters-group">
-                            <h4 class="catalog__sidebar-filters-group-title">
-                                Плотность
-                            </h4>
-                            <div class="catalog__sidebar-filters-checkboxes">
-                                <label class="catalog__sidebar-filters-checkbox">
-                                    <input type="checkbox" class="catalog__sidebar-filters-checkbox-input">
-                                    <span class="catalog__sidebar-filters-checkbox-mark">
-                                        <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
-                                            <use xlink:href="#checkmark"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="catalog__sidebar-filters-checkbox-text">
-                                        220 гр/м2
-                                    </span>
-                                </label>
-                                <label class="catalog__sidebar-filters-checkbox">
-                                    <input type="checkbox" class="catalog__sidebar-filters-checkbox-input">
-                                    <span class="catalog__sidebar-filters-checkbox-mark">
-                                        <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
-                                            <use xlink:href="#checkmark"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="catalog__sidebar-filters-checkbox-text">
-                                        250 гр/м2
-                                    </span>
-                                </label>
-                                <label class="catalog__sidebar-filters-checkbox">
-                                    <input type="checkbox" class="catalog__sidebar-filters-checkbox-input">
-                                    <span class="catalog__sidebar-filters-checkbox-mark">
-                                        <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
-                                            <use xlink:href="#checkmark"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="catalog__sidebar-filters-checkbox-text">
-                                        280 гр/м2
-                                    </span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="catalog__sidebar-filters-group">
-                            <h4 class="catalog__sidebar-filters-group-title">
-                                Марка производителя
-                            </h4>
-                            <div class="catalog__sidebar-filters-checkboxes">
-                                <label class="catalog__sidebar-filters-checkbox">
-                                    <input type="checkbox" class="catalog__sidebar-filters-checkbox-input">
-                                    <span class="catalog__sidebar-filters-checkbox-mark">
-                                        <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
-                                            <use xlink:href="#checkmark"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="catalog__sidebar-filters-checkbox-text">
-                                        Lady fly
-                                    </span>
-                                </label>
-                                <label class="catalog__sidebar-filters-checkbox">
-                                    <input type="checkbox" class="catalog__sidebar-filters-checkbox-input">
-                                    <span class="catalog__sidebar-filters-checkbox-mark">
-                                        <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
-                                            <use xlink:href="#checkmark"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="catalog__sidebar-filters-checkbox-text">
-                                        ECOTEX
-                                    </span>
-                                </label>
+                    <a href="#filters-modal" class="catalog__mobile-filters-link js-open-modal">
+                        Фильтры
+                        <svg width="14" height="14" aria-hidden="true" class="icon-filter">
+                            <use xlink:href="#filter"></use>
+                        </svg>
+                    </a>
+                    <div class="catalog__sidebar-filters-modal js-modal" id="filters-modal">
 
-                            </div>
-                        </div>
 
-                        <button class="catalog__sidebar-filters-submit" type="submit">
-                            Показать 30 товаров
-                        </button>
-                    </form>
+                        <form method="GET" action="/" class="catalog__sidebar-filters">
+                            <button class="modal__close js-close-modal">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-modal-close">
+                                    <use xlink:href="#modal-close"></use>
+                                </svg>
+                            </button>
+                            <div class="catalog__sidebar-filters-group">
+                                <h4 class="catalog__sidebar-filters-group-title">
+                                    Категория продукции
+                                </h4>
+                                <div class="catalog__sidebar-filters-checkboxes">
+                                    <label class="catalog__sidebar-filters-checkbox">
+                                        <input type="checkbox" class="catalog__sidebar-filters-checkbox-input">
+                                        <span class="catalog__sidebar-filters-checkbox-mark">
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                                <use xlink:href="#checkmark"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="catalog__sidebar-filters-checkbox-text">
+                                            Насадки для швабры
+                                        </span>
+                                    </label>
+                                    <label class="catalog__sidebar-filters-checkbox">
+                                        <input type="checkbox" class="catalog__sidebar-filters-checkbox-input"
+                                            checked="">
+                                        <span class="catalog__sidebar-filters-checkbox-mark">
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                                <use xlink:href="#checkmark"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="catalog__sidebar-filters-checkbox-text">
+                                            Насадки для швабры
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="catalog__sidebar-filters-group">
+                                <h4 class="catalog__sidebar-filters-group-title">
+                                    Размеры
+                                </h4>
+                                <div class="catalog__sidebar-filters-checkboxes">
+                                    <label class="catalog__sidebar-filters-checkbox">
+                                        <input type="checkbox" class="catalog__sidebar-filters-checkbox-input">
+                                        <span class="catalog__sidebar-filters-checkbox-mark">
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                                <use xlink:href="#checkmark"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="catalog__sidebar-filters-checkbox-text">
+                                            30х30 см
+                                        </span>
+                                    </label>
+                                    <label class="catalog__sidebar-filters-checkbox disabled">
+                                        <input type="checkbox" class="catalog__sidebar-filters-checkbox-input"
+                                            disabled="">
+                                        <span class="catalog__sidebar-filters-checkbox-mark">
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                                <use xlink:href="#checkmark"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="catalog__sidebar-filters-checkbox-text">
+                                            35х35 см
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="catalog__sidebar-filters-group">
+                                <h4 class="catalog__sidebar-filters-group-title">
+                                    Плотность
+                                </h4>
+                                <div class="catalog__sidebar-filters-checkboxes">
+                                    <label class="catalog__sidebar-filters-checkbox">
+                                        <input type="checkbox" class="catalog__sidebar-filters-checkbox-input">
+                                        <span class="catalog__sidebar-filters-checkbox-mark">
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                                <use xlink:href="#checkmark"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="catalog__sidebar-filters-checkbox-text">
+                                            220 гр/м2
+                                        </span>
+                                    </label>
+                                    <label class="catalog__sidebar-filters-checkbox">
+                                        <input type="checkbox" class="catalog__sidebar-filters-checkbox-input">
+                                        <span class="catalog__sidebar-filters-checkbox-mark">
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                                <use xlink:href="#checkmark"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="catalog__sidebar-filters-checkbox-text">
+                                            250 гр/м2
+                                        </span>
+                                    </label>
+                                    <label class="catalog__sidebar-filters-checkbox">
+                                        <input type="checkbox" class="catalog__sidebar-filters-checkbox-input">
+                                        <span class="catalog__sidebar-filters-checkbox-mark">
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                                <use xlink:href="#checkmark"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="catalog__sidebar-filters-checkbox-text">
+                                            280 гр/м2
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="catalog__sidebar-filters-group">
+                                <h4 class="catalog__sidebar-filters-group-title">
+                                    Марка производителя
+                                </h4>
+                                <div class="catalog__sidebar-filters-checkboxes">
+                                    <label class="catalog__sidebar-filters-checkbox">
+                                        <input type="checkbox" class="catalog__sidebar-filters-checkbox-input">
+                                        <span class="catalog__sidebar-filters-checkbox-mark">
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                                <use xlink:href="#checkmark"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="catalog__sidebar-filters-checkbox-text">
+                                            Lady fly
+                                        </span>
+                                    </label>
+                                    <label class="catalog__sidebar-filters-checkbox">
+                                        <input type="checkbox" class="catalog__sidebar-filters-checkbox-input">
+                                        <span class="catalog__sidebar-filters-checkbox-mark">
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                                <use xlink:href="#checkmark"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="catalog__sidebar-filters-checkbox-text">
+                                            ECOTEX
+                                        </span>
+                                    </label>
+
+                                </div>
+                            </div>
+
+                            <button class="catalog__sidebar-filters-submit" type="submit">
+                                Показать 30 товаров
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="catalog__main">

@@ -1,8 +1,7 @@
 .new-process {
     padding-bottom: 8rem;
     padding-top: 12rem;
-    position: relative;
-    z-index: 5;
+   
 
     @include breakpoint(mobile) {
         padding: 3rem 0;

@@ -45,8 +45,6 @@
 .intro__col:nth-child(1) {
     @include breakpointMF(small-tablet) {
         grid-column: span 6;
-        position: relative;
-        z-index: 30;
     }
 }
 .intro__col:nth-child(2) {
@@ -57,16 +55,37 @@
 
 .intro__main-heading {
     margin-bottom: 14rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1rem);
 
-  
+    .animatable & {
+        opacity: 1;
+        visibility: inherit;
+        transform: translateY(0);
+        transition: all 0.7s ease;
+    }
+
     @include breakpoint(mobile) {
         margin-bottom: 3rem;
     }
 }
 
 .intro__drop {
+    opacity: 0;
+    visibility: hidden;
     position: relative;
 
+    .animatable & {
+        opacity: 1;
+        visibility: inherit;
+
+        transition: all 0.7s ease;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
     @include breakpointMF(small-tablet) {
         left: 10rem;
     }
@@ -105,7 +124,7 @@
     backface-visibility: hidden;
     transform: translateZ(0);
     position: relative;
-    z-index: 10;
+    z-index: 40;
     color: var(--primary-color);
     &:link,
     &:visited {
@@ -153,7 +172,6 @@
     }
 }
 
-
 .intro__numbers-list-item {
     opacity: 0;
     visibility: hidden;
@@ -162,15 +180,14 @@
         opacity: 1;
         visibility: inherit;
 
-        transition: all .7s ease .4s;
+        transition: all 0.7s ease 0.4s;
         transform: translateY(0);
 
-
         &:nth-child(2) {
-            transition: all .7s ease .8s;
+            transition: all 0.7s ease 0.8s;
         }
         &:nth-child(3) {
-            transition: all .7s ease 1.2s;
+            transition: all 0.7s ease 1.2s;
         }
     }
 }
