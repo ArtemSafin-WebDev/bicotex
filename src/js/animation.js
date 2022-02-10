@@ -5,25 +5,58 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
 export default function animation() {
-    if (window.matchMedia('(max-width: 640px)').matches) return;
+    const balls = Array.from(document.querySelectorAll('.intro__video-shape-ball, .js-orange-line-ball'));
+    var mql = window.matchMedia('(max-width: 640px)');
+    let ballsScaled = false;
+
     
+
+    function screenTest(e) {
+        if (e.matches) {
+            if (ballsScaled) return;
+            balls.forEach(ball => {
+                const radius = Number(ball.getAttribute('r'));
+
+                console.log('Radius', radius);
+
+                ball.setAttribute('r', radius * 1.8);
+            });
+            ballsScaled = true;
+        } else {
+            if (!ballsScaled) return;
+            balls.forEach(ball => {
+                const radius = Number(ball.getAttribute('r'));
+
+                console.log('Radius', radius);
+
+                ball.setAttribute('r', radius / 1.8);
+            });
+            ballsScaled = false;
+        }
+    }
+
+    mql.addEventListener('change', screenTest);
+
+    screenTest(mql);
+
     const intro = document.querySelector('.intro');
     const process = document.querySelector('.process');
 
-  
-
     const ballsAnimationDuration = 70;
 
-  
-
-    const shapes = Array.from(document.querySelectorAll('.intro__video-shape'));
+    const shapes = Array.from(document.querySelectorAll('.intro__video-shape, .js-orange-line'));
 
     shapes.forEach(shape => {
-        const balls = Array.from(shape.querySelectorAll('.intro__video-shape-ball'));
+        console.log('Shape', shape);
+        const balls = Array.from(shape.querySelectorAll('.intro__video-shape-ball, .js-orange-line-ball'));
+
+        console.log('Ballsa', balls);
 
         const ballsCount = balls.length;
         let delayFactor = ballsAnimationDuration / ballsCount;
-        const path = shape.querySelector('.intro__video-shape-path');
+        const path = shape.querySelector('.intro__video-shape-path, .js-orange-line-shape-path');
+
+        console.log('Path', path);
         const tl = gsap.timeline({
             paused: true
         });
@@ -53,7 +86,6 @@ export default function animation() {
     });
 
     if (intro && process) {
-       
         // const tl = gsap.timeline({
         //     scrollTrigger: {
         //         trigger: '.intro__content',
@@ -61,10 +93,8 @@ export default function animation() {
         //         scrub: true,
         //         endTrigger: process,
         //         end: 'center center',
-               
         //     }
         // });
-
         // tl.to('.intro__heading', {
         //     autoAlpha: 0,
         //     duration: 0.2
@@ -101,7 +131,6 @@ export default function animation() {
         //         },
         //         '-=0.3'
         //     )
-
         //     .to(
         //         '.intro__video-large-shape',
         //         {
@@ -134,9 +163,5 @@ export default function animation() {
         //         },
         //         '<'
         //     )
-           
-           
     }
-
-
 }

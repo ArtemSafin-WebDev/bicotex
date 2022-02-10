@@ -71,7 +71,7 @@
         flex-shrink: 0;
 
         @include breakpoint(mobile) {
-            padding-bottom: 70%;
+            padding-bottom: 130%;
         }
     }
 }
@@ -111,7 +111,6 @@
     overflow: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
-    
 }
 
 .sales__card-image {

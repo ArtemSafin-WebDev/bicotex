@@ -97,24 +97,31 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
-    @include breakpoint(mobile) {
-        display: none;
-    }
 }
 
 .intro__video-large-shape {
     width: 252rem;
     height: 252rem;
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .intro__video-medium-shape {
     width: 138.1rem;
     height: 137.8rem;
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .intro__video-small-shape {
     width: 57.6rem;
     height: 57.6rem;
+    @include breakpoint(mobile) {
+        width: 120%;
+        height: 120%;
+    }
 }
 
 .intro__drop-link {
