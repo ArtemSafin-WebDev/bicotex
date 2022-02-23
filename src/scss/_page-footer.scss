@@ -169,12 +169,38 @@
     line-height: 2rem;
     color: rgba(white, 0.6);
     border-top: 1px solid rgba(white, 0.6);
-
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-gap: 2rem;
+    display: grid;
+    align-items: flex-end;
     @include breakpoint(mobile) {
         padding: 2rem 0;
-        
+        grid-template-columns: minmax(0, 1fr);
         font-size: 1.2rem;
         line-height: 1.2;
         border-color: rgba(white, 0.4);
+    }
+}
+
+.page-footer__copyright {
+    @include breakpointMF(small-tablet) {
+        grid-column: span 4;
+    }
+}
+
+.page-footer__made-by {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+
+    img {
+        flex-shrink: 0;
+        margin-left: 0.5rem;
+        width: 13.8rem;
+        height: auto;
+        position: relative;
+        bottom: -.05rem;
     }
 }
